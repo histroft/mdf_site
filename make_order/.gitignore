@@ -1,0 +1,50 @@
+# Игнорируем ВСЕ временные файлы
+*.dxf
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.log
+*.tmp
+*.bak
+*.backup
+*.db
+
+# Игнорируем тестовые папки
+TEST/
+test/
+temp/
+tmp/
+output/
+out/
+_*/
+*_test/
+
+# Игнорируем Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+ENV/
+env/
+.venv/
+
+# Игнорируем IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# НО НЕ ИГНОРИРУЕМ .py файлы
+!*.py
+!.gitignore
+!*.md

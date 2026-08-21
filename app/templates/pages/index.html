@@ -1,0 +1,108 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}MyChatApp - Авторизация{% endblock %}
+
+{% block content %}
+<div class="container-fluid vh-100">
+    <div class="row h-100">
+        <!-- Левая часть - приветствие -->
+        <div class="col-lg-6 d-none d-lg-flex bg-primary text-white">
+            <div class="d-flex align-items-center justify-content-center w-100">
+                <div class="text-center p-5">
+                    <i class="bi bi-chat-dots-fill" style="font-size: 4rem;"></i>
+                    <h1 class="display-4 fw-bold mt-3">MyChatApp</h1>
+                    <p class="lead">Современный мессенджер для комфортного общения</p>
+                    <div class="mt-5">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill me-3 fs-4"></i>
+                            <span>Мгновенные сообщения</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill me-3 fs-4"></i>
+                            <span>Групповые чаты</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill me-3 fs-4"></i>
+                            <span>Безопасное соединение</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая часть - форма авторизации -->
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="w-100" style="max-width: 400px;">
+                <div class="text-center mb-5">
+                    <i class="bi bi-chat-dots-fill text-primary" style="font-size: 3rem;"></i>
+                    <h2 class="mt-3 fw-bold">Добро пожаловать</h2>
+                    <p class="text-muted">Войдите в свой аккаунт</p>
+                </div>
+
+                <!-- Сообщения об ошибках -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <!-- Форма авторизации -->
+                <form method="POST" action="{{ url_for('auth.login') }}">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Имя пользователя</label>
+                        <input type="text" class="form-control form-control-lg" id="username" name="username" 
+                               placeholder="Введите ваш username" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Пароль</label>
+                        <input type="password" class="form-control form-control-lg" id="password" name="password" 
+                               placeholder="Введите ваш пароль" required>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                        <label class="form-check-label" for="remember">Запомнить меня</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100 py-2">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>Войти
+                    </button>
+                </form>
+
+                <div class="text-center mt-4">
+                    <p class="mb-0">Нет аккаунта? 
+                        <a href="{{ url_for('auth.register') }}" class="text-decoration-none">Зарегистрироваться</a>
+                    </p>
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="#" class="text-decoration-none text-muted small">Забыли пароль?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<style>
+    body {
+        padding-top: 0 !important;
+        overflow: hidden;
+    }
+    
+    .navbar {
+        display: none !important;
+    }
+    
+    footer {
+        display: none !important;
+    }
+</style>
+{% endblock %}

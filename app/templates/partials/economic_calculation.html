@@ -1,0 +1,33 @@
+<div class="group-box group-box-4">
+    <h3>Экономический расчет</h3>
+    
+    <!-- Контейнер с отступами между секциями -->
+    <div style="display: flex; flex-direction: column; gap: 15px;">
+        
+        <!-- Секция 1: Тип цены -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <label class="form-label" style="width: auto;">Тип цены</label>
+            <select class="form-control" name="price_type" style="width: 231px;">
+                <option>Цены ТД ТОРЭКС</option>
+                <option>РРЦ</option>
+                <option>Цены город</option>
+            </select>
+        </div>
+
+        <!-- Секция 2: % наценки -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <label class="form-label" style="width: auto;">% наценки базовой цены</label>
+            <input type="text" class="form-control" name="percent_base_price" style="width: 50px;">
+        </div>
+
+        <!-- Секция 3: Textarea -->
+        <div>
+            <textarea class="text-edit" name="text_info_2" style="height: 524px;"></textarea>
+        </div>
+
+        <!-- Секция 4: Кнопка -->
+        <div style="display: flex; justify-content: center;">
+            <button class="button calc-cost">Расчет цены</button>
+        </div>
+    </div>
+</div>

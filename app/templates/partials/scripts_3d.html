@@ -1,0 +1,139 @@
+<script>
+class Door3DGenerator {
+    constructor() {
+        this.btn = document.querySelector('.door3d-generate-but');
+        this.statusEl = document.getElementById('door3d-status');
+        this.imgOut = document.getElementById('door3d-img-out');
+        this.imgIn = document.getElementById('door3d-img-in');
+        this.pollTimer = null;
+
+        if (this.btn) this.btn.addEventListener('click', () => this.start());
+    }
+
+    setStatus(text) {
+        if (this.statusEl) this.statusEl.textContent = text;
+    }
+
+    setBusy(busy) {
+        if (!this.btn) return;
+        this.btn.disabled = busy;
+        this.btn.style.opacity = busy ? '0.5' : '1';
+        this.btn.style.cursor = busy ? 'not-allowed' : 'pointer';
+    }
+
+    value(id) {
+        const element = document.getElementById(id);
+        return element && element.value ? element.value : null;
+    }
+
+    collectSceneTextures() {
+        return {
+            wall_texture_path: this.value('door3d-wall-out'),
+            floor_texture_path: this.value('door3d-floor-out'),
+            wall_texture_path_inner: this.value('door3d-wall-in'),
+            floor_texture_path_inner: this.value('door3d-floor-in'),
+        };
+    }
+
+    placeholder(container, text) {
+        if (!container) return;
+        const span = document.createElement('span');
+        span.textContent = text;
+        container.classList.remove('has-image');
+        container.replaceChildren(span);
+    }
+
+    async responseJson(response) {
+        try {
+            return await response.json();
+        } catch (_error) {
+            throw new Error(`Сервер сайта вернул HTTP ${response.status}`);
+        }
+    }
+
+    async start() {
+        if (!window.buttonsHandler) {
+            alert('Форма ещё не готова, попробуйте позже');
+            return;
+        }
+
+        this.setBusy(true);
+        try {
+            const order = window.buttonsHandler.prepareDataForPython();
+            const validation = window.buttonsHandler.validateForm(order);
+            if (!validation.isValid) {
+                throw new Error('Заполните обязательные поля: ' + validation.errors.join(', '));
+            }
+
+            this.setStatus('Формирование договорных DXF…');
+            this.placeholder(this.imgOut, 'Рендер…');
+            this.placeholder(this.imgIn, 'Рендер…');
+
+            const response = await fetch('/api/generate-3d', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    data: order,
+                    ...this.collectSceneTextures(),
+                }),
+            });
+            const result = await this.responseJson(response);
+            if (!response.ok || !result.success || !result.job_id) {
+                throw new Error(result.message || 'Не удалось запустить генерацию');
+            }
+
+            this.setStatus('Идёт рендер на RENDER_NEW…');
+            this.poll(result.job_id);
+        } catch (error) {
+            console.error('Ошибка 3D:', error);
+            this.setStatus('Ошибка: ' + error.message);
+            this.placeholder(this.imgOut, 'Ошибка');
+            this.placeholder(this.imgIn, 'Ошибка');
+            this.setBusy(false);
+        }
+    }
+
+    poll(jobId) {
+        if (this.pollTimer) clearTimeout(this.pollTimer);
+        const check = async () => {
+            try {
+                const response = await fetch(`/api/generate-3d/status/${jobId}?t=${Date.now()}`);
+                const status = await this.responseJson(response);
+                if (!response.ok) throw new Error(status.message || `HTTP ${response.status}`);
+
+                if (status.status === 'done') {
+                    this.setStatus('Готово');
+                    this.showImage(this.imgOut, `/api/generate-3d/image/${jobId}/out`);
+                    this.showImage(this.imgIn, `/api/generate-3d/image/${jobId}/in`);
+                    this.setBusy(false);
+                    return;
+                }
+                if (status.status === 'error' || status.status === 'unknown') {
+                    const message = status.message || 'задача не найдена';
+                    this.setStatus('Ошибка: ' + message);
+                    this.placeholder(this.imgOut, message);
+                    this.placeholder(this.imgIn, '');
+                    this.setBusy(false);
+                    return;
+                }
+                this.pollTimer = setTimeout(check, 3000);
+            } catch (error) {
+                console.warn('Не удалось получить статус 3D:', error);
+                this.pollTimer = setTimeout(check, 3000);
+            }
+        };
+        check();
+    }
+
+    showImage(container, url) {
+        if (!container) return;
+        const image = document.createElement('img');
+        image.src = url + '?t=' + Date.now();
+        image.alt = 'Рендер двери';
+        container.classList.add('has-image');
+        container.replaceChildren(image);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => new Door3DGenerator());
+</script>

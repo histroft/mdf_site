@@ -1,0 +1,62 @@
+graph LR
+    subgraph ВНЕШНИЕ_ЗАВИСИМОСТИ
+        EZDXF[ezdxf]
+        PIL[Pillow/PIL]
+        IMG2PDF[img2pdf]
+        PYPDF2[PyPDF2]
+        REPORTLAB[reportlab]
+        MATPLOTLIB[matplotlib]
+    end
+
+    subgraph ОСНОВНЫЕ_МОДУЛИ
+        MDP[MakeDoorPDF.py]
+        OUT[out_dxf.py]
+        IN[in_dxf.py]
+        CUT[cuts.py]
+    end
+
+    subgraph DXF_МОДУЛИ
+        BASE[base.py]
+        INSERT[inserting.py]
+        TRANS[transforms.py]
+        PRIM[primitives.py]
+        TEXT[text.py]
+    end
+
+    subgraph КОНВЕРТАЦИЯ
+        D2P[dxf_to_jpg.py]
+        P2P[png_to_pdf.py]
+        WM[add_watermark.py]
+    end
+
+    MDP --> OUT
+    MDP --> IN
+    MDP --> CUT
+    
+    OUT --> BASE
+    OUT --> INSERT
+    OUT --> TRANS
+    
+    IN --> BASE
+    IN --> INSERT
+    IN --> TRANS
+    
+    CUT --> BASE
+    CUT --> INSERT
+    CUT --> TRANS
+    
+    BASE --> EZDXF
+    
+    D2P --> MATPLOTLIB
+    D2P --> PIL
+    
+    P2P --> IMG2PDF
+    P2P --> PIL
+    
+    WM --> PYPDF2
+    WM --> REPORTLAB
+    
+    style ВНЕШНИЕ_ЗАВИСИМОСТИ fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style ОСНОВНЫЕ_МОДУЛИ fill:#e1f5fe,stroke:#333,stroke-width:2px
+    style DXF_МОДУЛИ fill:#fff3e0,stroke:#333,stroke-width:2px
+    style КОНВЕРТАЦИЯ fill:#e8f5e9,stroke:#333,stroke-width:2px

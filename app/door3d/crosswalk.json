@@ -1,0 +1,4359 @@
+{
+  "_comment": "Таблица сопоставления значений заказа (tab1) с ассетами 3D_module. Пути относительно папки 3D_module. Значения заполнены СЛУЧАЙНО (фиксированный seed=42) — отредактируйте при необходимости. '~auto' включает мягкий матч по имени файла.",
+  "patterns": {
+    "_comment": "05/07 рисунок -> DXF полотна. Заполнено случайно из доступных контуров.",
+    "_default": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "5D1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "5D2": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "5D3": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "5D4": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "5D5": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "5D6": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "A-185": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "A-26": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "A-28": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "A-29": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "A-30": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "A-L1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "A6-110": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "A6-185": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "A6-26": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "A6-28": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "A6-L1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Arietta": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Arietta-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Aurora": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Aurora-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Batista VM/ШП Каррара": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Batista VM/ШП Каррара-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Batista VM/ШП Кедровый": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Batista VM/ШП Кедровый-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Batista VM/ШП Платинум": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Batista VM/ШП Платинум-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Batista/ШП Каррара": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Batista/ШП Кедровый": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Batista/ШП Платинум": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Brook/ПВХ Дуб крафт золотой": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Brook/ПВХ Дуб крафт золотой-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Brook/ПВХ Ферро": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Brook/ПВХ Черная шагрень": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Brook/ПВХ Черная шагрень-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Busoni": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Busoni-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "CBR-20": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "CBR-21": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "CBR-22": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "CBR-25": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "CBR-26": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "CBR-27": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "CBR-28": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "CBR-29": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "CBR-30": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "CBR-DL11": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "CBR-DL6": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "CBR-L18": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "CBR-M1": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "CBR-M2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "CBR-MM": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "CBR-NC1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "CBR-NC2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "CBR-NC3": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "CBR-S1/пекан натур": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "CBR-S1/пекан темный": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "CBR-S1/черная шагрень": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "CBR-S11/астана табак": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "CBR-S11/бетон графит": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "CBR-S11/дуб золотой": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "CBR-S11/черная шагрень": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "CBR-S12/астана табак": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "CBR-S12/бетон графит": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "CBR-S12/дуб золотой": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "CBR-S12/пекан натур": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "CBR-S12/пекан темный": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "CBR-S12/черная шагрень": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "CBR-S2/черная шагрень": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "CBR-S4/черная шагрень": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "CBR-W1": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "CBR-W11": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "CBR-W12": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "CBR-W2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Castle": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D-3D2": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D-DL1": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D-DL1-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D-DL11": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D-DL11-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D-DL2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D-DL2-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D-DL4": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D-DL6": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D-L1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D-L1-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D-L18": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D-L18-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D-L8": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D-L8-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D-M1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D-M2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D-MM": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D-S1/астана табак": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D-S1/бетон графит": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D-S1/дуб золотой": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D-S1/пекан натур": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D-S1/пекан темный": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D-S1/черная шагрень": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D-S11/астана табак": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D-S11/бетон графит": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D-S11/дуб золотой": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D-S11/черная шагрень": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D-S12/астана табак": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D-S12/бетон графит": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D-S12/дуб золотой": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D-S12/пекан натур": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D-S12/пекан темный": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D-S12/черная шагрень": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D-S4/черная шагрень": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D-S5/дуб золотой": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D-W1": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D-W11": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D-W12": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D-W2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D13": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D13-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D15": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D18": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D19": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D23": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D23-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D25": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D25-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D26": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D26-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D27": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D27-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D28": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D28-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D33": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D33-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D34": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D34-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D35": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D35-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D36": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D36-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D39": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D39-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D6-13": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D6-15": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D6-23": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D6-25": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D6-26": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D6-27": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D6-28": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "D6-33": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D6-34": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D6-35": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D6-36": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D6-37": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D6-39": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D6-CM": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D6-DL1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "D6-DL11": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D6-DL2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D6-DL6": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D6-L1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D6-L18": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D6-L8": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D6-M1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D6-M2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D6-V1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "D6-V2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D6-W1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "D6-W11": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "D6-W12": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "D6-W2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "DC-1B": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "DC-1MB": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "DC-1MG": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "DL-1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "DL-2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "DL-3": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "DM": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "DML-02": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Double": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Double-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Eve VM/ШП Каррара": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Eve VM/ШП Каррара-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Eve VM/ШП Кедровый": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Eve VM/ШП Кедровый-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Eve VM/ШП Платинум": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Eve VM/ШП Платинум-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Eve/ШП Каррара": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Eve/ШП Кедровый": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Eve/ШП Платинум": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Extent": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Extent-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "FLN-1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "FLN-2": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "FLN-3": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Felicia": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Felicia-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Grade": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Grade-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Grosso": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Grosso-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "HT-3": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "HT-3R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Hamish": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Irish": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "L1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Lines/ЛКП Clear": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Lines/ЛКП Clear-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Lines/ЛКП Ivory": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Lines/ЛКП Ivory-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Lines/ЛКП Malva": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Lines/ЛКП Malva-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Lines/ЛКП Stone": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Lines/ЛКП Stone-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Lines/ЛКП Бирюза": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Lines/ЛКП Бирюза-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Lines/ЛКП Бруно": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Lines/ЛКП Бруно-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Lines/ЛКП Графит": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Lines/ЛКП Графит-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Lines/ЛКП Кармин": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Lines/ЛКП Кармин-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Lines/ЛКП Малахит": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Lines/ЛКП Малахит-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Lines/ЛКП Муссон": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Lines/ЛКП Муссон-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Lines/ЛКП Насыщеный чёрный": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Lines/ЛКП Насыщеный чёрный-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Lines/ЛКП Цитрус": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Lines/ЛКП Цитрус-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Lucia": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Lucia-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "MC": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "MM": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "MM-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Maze": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Maze-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "NEO-1.1": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "NEO-2": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "NEO-3": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "NEO-4": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "NEO-5": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Nairi": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Nairi-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-C1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "OP-C2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-C3": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-CM": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-DL1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-DL11": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-DL2": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-DL6": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-L1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-L18": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-L2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "OP-L3": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-L4": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "OP-L6": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-L7": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "OP-L8": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-L9": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-M1": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-M2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "OP-MM": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-NC1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-NC2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "OP-NC3": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "OP-S1/астана табак": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S1/бетон графит": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-S1/бьянко": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S1/дуб золотой": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S1/оскуро": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-S1/пекан натур": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-S1/пекан темный": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-S1/санторини бел": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-S1/черная шагрень": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S11/астана табак": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "OP-S11/бетон графит": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S11/дуб золотой": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S11/пекан натур": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S11/пекан темный": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-S11/черная шагрень": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-S12/астана табак": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-S12/бетон графит": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-S12/дуб золотой": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-S12/пекан натур": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-S12/пекан темный": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-S12/черная шагрень": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S2/астана табак": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-S2/бетон графит": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "OP-S2/бьянко": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-S2/дуб золотой": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-S2/санторини бел": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-S2/черная шагрень": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-S3/бьянко": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "OP-S3/дуб золотой": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S3/оскуро": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-S3/песок гор": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S3/санторини бел": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-S3/черная шагрень": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "OP-S3/янтарь гор": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-S4/черная шагрень": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-SH1/ШП Каррара": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-SH1/ШП Кедровый": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-SH1/ШП Платинум": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "OP-SH1/ШП Янтарный": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-SH2/ШП Каррара": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-SH2/ШП Кедровый": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "OP-SH2/ШП Платинум": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "OP-SH2/ШП Янтарный": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-SH3/ШП Каррара": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-SH3/ШП Кедровый": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-SH3/ШП Платинум": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-SH3/ШП Янтарный": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-SH4/ШП Каррара": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-SH4/ШП Кедровый": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-SH4/ШП Платинум": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-SH4/ШП Янтарный": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-SH5/ШП Каррара": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-SH5/ШП Кедровый": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "OP-SH5/ШП Платинум": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-SH5/ШП Янтарный": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "OP-W1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-W11": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "OP-W12": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "OP-W2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Opera": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Opera-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "PK-5N": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Puente": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Puente-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Pulsar": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Pulsar-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "RGSO": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Ray": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Ray-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Rhombus/ЛКП Clear": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Rhombus/ЛКП Clear-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Rhombus/ЛКП Ivory": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Rhombus/ЛКП Ivory-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Rhombus/ЛКП Malva": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Rhombus/ЛКП Malva-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Rhombus/ЛКП Stone": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Rhombus/ЛКП Stone-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Rhombus/ЛКП Бирюза": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Rhombus/ЛКП Бирюза-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Rhombus/ЛКП Бруно": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Rhombus/ЛКП Бруно-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Rhombus/ЛКП Графит": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Rhombus/ЛКП Графит-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Rhombus/ЛКП Кармин": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Rhombus/ЛКП Кармин-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Rhombus/ЛКП Малахит": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Rhombus/ЛКП Малахит-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Rhombus/ЛКП Муссон": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Rhombus/ЛКП Муссон-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Rhombus/ЛКП Насыщеный чёрный": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Rhombus/ЛКП Насыщеный чёрный-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Rhombus/ЛКП Цитрус": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Rhombus/ЛКП Цитрус-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "River/ПВХ Дуб крафт золотой": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "River/ПВХ Дуб крафт золотой-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "River/ПВХ Черная шагрень": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "River/ПВХ Черная шагрень-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Rulada": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Rulada-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "S60-C1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "S60-C2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "S60-C2M": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "S60-C3": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "S60-C6M": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "S60-DL1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "S60-DL2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "S60-HT2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "S60-L1": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "S60-L2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "S60-L3": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "S60-L4": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "S60-L6": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "S60-L6M": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "S60-L7": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "S60-L7M": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "S60-L9M": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "S60-M": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "S60-NC1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "S60-NC2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "S60-NC3": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "S60G-01": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "S60G-01M": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "S60G-02": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "S60G-02M": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "S60G-03": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "S60G-03M": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "S60G-15": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "S60G-15M": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "S60G-16": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "S60G-16M": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "S60G-17": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "S60G-17M": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "S60G-25": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "S60G-25M": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "S60G-28": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "S60G-28M": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "S60G-31": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "S60G-31M": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-1N": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-3B": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SA-C1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "SA-C2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SA-C2M": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SA-C3": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-C6M": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SA-CM": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SA-DL1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SA-DL11": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SA-DL2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SA-DL6": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SA-HPL-11B": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-HPL-11W": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SA-HPL-12B": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SA-HPL-12W": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SA-HPL-13B": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-HPL-21B": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SA-HPL-21W": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SA-HPL-22B": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SA-HPL-22W": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SA-HPL-31B": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SA-HPL-31W": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-L1": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-L18": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SA-L2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SA-L3": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SA-L4": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-L6": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SA-L6M": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SA-L7": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SA-L7M": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-L8": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SA-L9": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "SA-L9M": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-M1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SA-M2": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SA-MM": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SA-NC1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "SA-NC2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-NC3": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SA-W1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SA-W11": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SA-W12": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SA-W2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SLT-11": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SLT-13": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SLT-23": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SLT-25": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "SLT-26": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SLT-27": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SLT-28": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "SLT-33": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SLT-34": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SLT-CM": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SNG": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SNG-1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SNG-1M": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SNG-1М": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SNG-2": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SNG-2M": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SNG-G": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SNG-M": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SNG-MG": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SP-18B": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "SP-18N": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SP-19B": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SP-19N": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SP-20": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SP-21": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SP-22B": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SP-22N": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SP-23B": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SP-23N": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SP-4B": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SP-4N": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SP-5B": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "SP-5N": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SP-6B": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "SP-6N": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "SP-90B": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "SP-90N": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SP-91B": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SP-91N": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SP-93B": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "SP-93N": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "SP-94B": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "SP-94N": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Saros": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Saros-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Shine/ШП Каррара": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Shine/ШП Кедровый": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Shine/ШП Платинум": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Slice VM/Кол. Бруно": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Slice VM/Кол. Бруно-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Slice VM/Кол. Бьянко": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Slice VM/Кол. Бьянко-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Slice VM/Кол. Графит": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Slice VM/Кол. Графит-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Slice VM/Кол. Неро": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Slice VM/Кол. Неро-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Slice/Кол. Бруно": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Slice/Кол. Бьянко": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Slice/Кол. Графит": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Slice/Кол. Неро": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Solo": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Solo-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Stripe/Кол. Бруно": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Stripe/Кол. Бруно-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Stripe/Кол. Бьянко": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Stripe/Кол. Бьянко-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Stripe/Кол. Графит": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Stripe/Кол. Графит-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Stripe/Кол. Неро": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Stripe/Кол. Неро-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Sunrise": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Sunrise-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "T-13": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-23": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "T-26": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "T-28": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-33": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "T-35": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "T-36": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "T-37": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "T-C1": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "T-C11": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "T-C2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "T-C3": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "T-CM": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "T-DL1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "T-DL11": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "T-DL2": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "T-DL6": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "T-L1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-L18": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "T-L8": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "T-M1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "T-M2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "T-M5": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "T-MM": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "T-S1/астана табак": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "T-S1/бетон графит": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "T-S1/дуб золотой": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "T-S1/пекан натур": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "T-S1/пекан темный": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-S1/черная шагрень": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "T-S11/астана табак": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "T-S11/бетон графит": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "T-S11/дуб золотой": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "T-S11/пекан натур": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-S11/пекан темный": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-S11/черная шагрень": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-S12/астана табак": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-S12/бетон графит": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-S12/дуб золотой": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "T-S12/пекан натур": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "T-S12/пекан темный": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "T-S12/черная шагрень": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "T-S4/черная шагрень": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-S5/дуб золотой": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "T-W1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "T-W11": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "T-W12": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "T-W2": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "TC-1B": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "TC-1MB": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "TC-1MG": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Trixie": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Trixie-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UC-1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UC-2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "UC-3": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UC-4": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UC-5": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "UT-C1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-C2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-C2R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-C3": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-CM": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-F1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-F2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-F3": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-F4": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-F5": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-F6B": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-F6C": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "UT-F7B": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-F7C": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-F8B": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "UT-F8C": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "UT-L1": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "UT-L1R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-L2": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-L3": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-L4": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-L5": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-L6": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "UT-L7": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-MM": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-NC1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-NC1R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-NC2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-NC3": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-OC": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-S1/акация темн": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-S1/астана табак": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-S1/бетон графит": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-S1/бьянко": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "UT-S1/дуб зололтой": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "UT-S1/санторини бел": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-S1/черная шагрень": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-S11/акация темн": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-S11/астана табак": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-S11/бетон графит": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "UT-S11/бьянко": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "UT-S11/дуб золотой": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-S11/санторини бел": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-S11/черная шагрень": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "UT-S2/акация темн": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-S2/астана табак": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-S2/бетон графит": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-S2/бьянко": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "UT-S2/дуб зололтой": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "UT-S2/санторини бел": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-S2/черная шагрень": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-S3/акация темн": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-S3/бьянко": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "UT-S3/дуб зололтой": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-S3/оскуро": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UT-S3/песок гор": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UT-S3/санторини бел": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "UT-S3/черная шагрень": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "UT-S3/янтарь гор": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UTC-1B": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "UTC-1MB": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "UTC-1MG": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "VDM-1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "VDM-2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Valencia": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Viewport/ШП Каррара": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Viewport/ШП Кедровый": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Viewport/ШП Платинум": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "VitaP": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "VitaP-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "VitaV": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "VitaVM": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "VitaVM-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Volume": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Volume-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Vortex": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "Vortex-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Wale": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Wale-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "York": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "АLT-13": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "АLT-23": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "АLT-25": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "АLT-26": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "АLT-27": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "АLT-28": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "АLT-33": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "АLT-34": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "АLT-35": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "АLT-36": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "АLT-39": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "АLT-CM": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "АLT-DL6": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "АLT-L1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "АLT-L8": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "АLT-M2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "АLT-W1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "АLT-W2": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Без рисунка 10 мм": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Без рисунка 10 мм R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "Без рисунка 10мм R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Без рисунка 12 мм": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Без рисунка 16 мм": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Без рисунка 22 мм": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Без рисунка 6 мм": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "ГОРИЗОНТ": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "КЛАССИК": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_10_00002": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_10_00003": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_10_D-S12/черная шагрень": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_10_NEO-1.1": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_10_NEO-3": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_10_NEO-4": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_10_PK-5N": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_10_РК-10N": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_10_РК-3N": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_10_РК-3N FDL": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_10_РК-4N": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_10_РК-5N": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_10_РК-5N FDL": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_A-185": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_A-26": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_A-28": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_A-29": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_A-30": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_A-L1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_Arietta": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_Arietta-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_Aurora": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_Aurora-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_Busoni": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_Busoni-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_CBR-20": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_CBR-21": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_CBR-22": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_CBR-25": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_CBR-26": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_CBR-27": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_CBR-28": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_CBR-29": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_CBR-30": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_CBR-NC1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_CBR-NC2": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_CBR-NC3": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_Castle": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_D-DL1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_D-DL1-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_D-DL11": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_D-DL11-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_D-DL2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_D-DL2-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_D-L1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_D-L1-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_D-L18": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_D-L18-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_D-L8": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_D-L8-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_D13": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_D13-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_D23": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_D23-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_D25": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_D25-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_D26": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_D26-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_D27": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_D27-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_D28": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_D28-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_D33": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_D33-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_D34": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_D34-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_D35": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_D35-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_D36": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_D36-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_D39": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_D39-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_DM": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_Double": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_Double-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_Extent": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_Extent-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_Felicia": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_Felicia-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_Grosso": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_Grosso-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_HT-3": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_HT-3R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_Hamish": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_Irish": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_Lucia": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_Lucia-R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_Maze": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_Maze-R": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_Nairi": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_Nairi-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_Opera": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_Opera-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_Puente": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_Puente-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_Ray": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_Ray-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_Rulada": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_Rulada-R": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_S60-C1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_S60-C2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_S60-C3": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_S60-DL1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_S60-DL2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_S60-HT2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_S60-L1": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_S60-L2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_S60-L3": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_S60-L4": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_S60-L6": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_S60-L7": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_S60-NC1": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_S60-NC2": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_S60-NC3": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_SA-C1": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_SA-C2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_SA-C3": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_SA-DL1": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_SA-DL2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_SA-L1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_SA-L2": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_SA-L3": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_SA-L4": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_SA-L6": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_SA-L7": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_SA-L8": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_SA-L9": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_SA-NC1": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_SA-NC2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_SA-NC3": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_SNG": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_SNG-G": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_Saros": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_Saros-R": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_Solo": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_Solo-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_Sunrise": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_Sunrise-R": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_T-23": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_T-28": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_T-33": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_T-35": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_T-C1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_T-C2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_T-C3": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_T-CM": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_T-DL1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_T-DL11": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_T-DL2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_T-L1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_T-L18": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_T-L8": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_Trixie": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_Trixie-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_UC-1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_UC-2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_UC-3": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_UC-4": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_UC-5": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_UT-C1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_UT-C2": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_UT-C2R": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_UT-C3": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_UT-CM": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_UT-F1": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_UT-F2": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_UT-F3": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_UT-F4": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_UT-F5": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_UT-F6B": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_UT-F6C": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_UT-F7B": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_UT-F7C": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_UT-F8B": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_UT-F8C": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_UT-L1": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_UT-L2": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_UT-L3": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "НСТ_16_UT-L4": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_UT-L5": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_UT-L6": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_UT-L7": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_UT-NC1": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "НСТ_16_UT-NC2": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "НСТ_16_UT-NC3": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_UT-OC": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "НСТ_16_Valencia": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "НСТ_16_VitaP": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_VitaP-R": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "НСТ_16_York": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "РК-10N": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "РК-11N": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "РК-3N": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "РК-3N FDL": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "РК-4N": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "РК-5N": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "РК-5N FDL": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "С10-1": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "С10-10": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "С10-11": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "С10-12": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "С10-13": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "С10-2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "С10-3": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "С10-4": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "С10-5": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "С10-6": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "С10-7": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "С10-8": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "С10-9": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "С6-1": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "С6-10": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "С6-11": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "С6-12": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "С6-2": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "С6-3": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "С6-4": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "С6-5": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "С6-6": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "С6-7": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "С6-8": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "С6-9": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "САМУРАЙ": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "СК6-СМ": {
+      "dxf": "dxf/outer/D-DL2.dxf",
+      "dxf_inner": "dxf/inner/D-DL2.dxf"
+    },
+    "СК610": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "СК611": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "СК62": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "СК65-S": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "СК67": {
+      "dxf": "dxf/outer/D-L8.dxf",
+      "dxf_inner": "dxf/inner/D-L8.dxf"
+    },
+    "СК68": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "СК69": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Худ фрез 10мм": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Худ фрез 10мм 2х": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Худ фрез 10мм 3х": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Худ фрез 12мм": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Худ фрез 16мм": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Худ фрез 16мм 2х": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Худ фрез 16мм 3х": {
+      "dxf": "dxf/outer/D26.dxf",
+      "dxf_inner": "dxf/inner/D26.dxf"
+    },
+    "Худ фрез 22мм": {
+      "dxf": "dxf/outer/D34.dxf",
+      "dxf_inner": "dxf/inner/D34.dxf"
+    },
+    "Худ фрез 6мм": {
+      "dxf": "dxf/outer/D27.dxf",
+      "dxf_inner": "dxf/inner/D27.dxf"
+    },
+    "Худ фрез 6мм 2х": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    },
+    "Худ фрез 6мм 3х": {
+      "dxf": "dxf/outer/D25.dxf",
+      "dxf_inner": "dxf/inner/D25.dxf"
+    }
+  },
+  "colors": {
+    "_comment": "04/06 цвет -> текстура. Заполнено случайно из textures/.",
+    "_mode": "~auto",
+    "_default": "textures/1.jpg",
+    "Без панели": "textures/Черная-шагрень-Ч.jpg",
+    "Врем. панель": "textures/ПВХ Айвори_Т.jpg",
+    "ГРУНТ-пленка": "textures/Дуб-белый-матовый-С_310326.jpg",
+    "КТ Белый": "textures/Каррара-Т_горизонт.jpg",
+    "КТ Дуб медовый": "textures/Дуб-Янтарь-Горизонт-Т.jpg",
+    "Колоре бьянко": "textures/Гриджио-Т.jpg",
+    "Колоре гриджио": "textures/Астана-Табачный-Горизонт-Т_4.jpg",
+    "ЛКП Clear": "textures/порошок-Колоре-Гриджио_Ч.jpg",
+    "ЛКП Ivory": "textures/Верде-Т.jpg",
+    "ЛКП Malva": "textures/Кедровый-Т_горизонт.jpg",
+    "ЛКП NCS": "textures/Астана-Табачный-Горизонт-Т_4.jpg",
+    "ЛКП RAL": "textures/порошок-колоре-неро-Ч.jpg",
+    "ЛКП Stone": "textures/ПВХ-Бетон-графит-Т_020226.jpg",
+    "ЛКП Бирюза": "textures/порошок-коричневый-букле-Ч.jpg",
+    "ЛКП Бруно": "textures/Черная-шагрень-Ч.jpg",
+    "ЛКП Графит": "textures/Бирюза-Т.jpg",
+    "ЛКП Кармин": "textures/Верде-Т.jpg",
+    "ЛКП Малахит": "textures/Графен_Т.jpg",
+    "ЛКП Муссон": "textures/порошок-колоре-неро-Ч.jpg",
+    "ЛКП Насыщеный чёрный": "textures/ПВХ Кармин_Т.jpg",
+    "ЛКП Цитрус": "textures/Дуб-белый-матовый-С_310326.jpg",
+    "МДФ Бетон графит": "textures/порошок-Колоре-Гриджио_Ч.jpg",
+    "ПВХ Авокадо": "textures/Платина-Т_горизонт.jpg",
+    "ПВХ Айвори": "textures/порошок-коричневый-букле-Ч.jpg",
+    "ПВХ Акация темная": "textures/ПВХ-Айвори-Т_020226.jpg",
+    "ПВХ Американский Орех классический": "textures/Санторини-белый-С_270324.jpg",
+    "ПВХ Астана": "textures/Дуб-крафт-золотой-Т.jpg",
+    "ПВХ Астана Горизонт": "textures/Авокадо-Т.jpg",
+    "ПВХ Астана Табачный": "textures/Верде-Т.jpg",
+    "ПВХ БЕЛ перламутр": "textures/Дуб-крафт-золотой-Т.jpg",
+    "ПВХ БЕЛ шамбори": "textures/Гриджио-Т.jpg",
+    "ПВХ Бетон графит": "textures/ЛКП-Графит-Ч.jpg",
+    "ПВХ Бетон известковый": "textures/Бирюза-Т.jpg",
+    "ПВХ Бетон темно-серый": "textures/Каррара-Т_горизонт.jpg",
+    "ПВХ Бетон темный": "textures/1.jpg",
+    "ПВХ Бьянко": "textures/Черное-дерево_Т.jpg",
+    "ПВХ Вельвет белый поперечный": "textures/ПВХ-Бетон-графит-Т_020226.jpg",
+    "ПВХ Верде": "textures/Бетон темный Невский.jpg",
+    "ПВХ Гриджио": "textures/Дуб-белый-матовый-С_310326.jpg",
+    "ПВХ ДУБ БЕЛЕНЫЙ": "textures/3.jpg",
+    "ПВХ ДУБ УГОЛЬНЫЙ": "textures/4.png",
+    "ПВХ Дорс светлый горизонт": "textures/Пекан-натуральный_Т.jpg",
+    "ПВХ Дуб Монтана натуральный(42685)": "textures/Дуб-крафт-золотой-Т.jpg",
+    "ПВХ Дуб антико": "textures/Черная-шагрень-Ч.jpg",
+    "ПВХ Дуб белый матовый": "textures/Бетон темный Невский.jpg",
+    "ПВХ Дуб коньяк": "textures/ФМ_Американский-орех_T.jpg",
+    "ПВХ Дуб крафт золотой": "textures/порошок-коричневый-букле-Ч.jpg",
+    "ПВХ Дуб песок горизонт": "textures/ПВХ Терракота_Т.jpg",
+    "ПВХ Дуб сиена карамельный": "textures/Авокадо-Т.jpg",
+    "ПВХ Дуб сиена мореный": "textures/1.jpg",
+    "ПВХ Дуб янтарь горизонт": "textures/Пекан-темный_Т.jpg",
+    "ПВХ Кармин": "textures/Дуб-крафт-золотой-Т.jpg",
+    "ПВХ Карпатская ель": "textures/ПВХ Кармин_Т.jpg",
+    "ПВХ Крема": "textures/ПВХ Кармин_Т.jpg",
+    "ПВХ ЛЕС орех": "textures/ПВХ  Орех ларче_Т.jpg",
+    "ПВХ Ларче Орех": "textures/Красное-дерево_Береза-Т.jpg",
+    "ПВХ Лиственница белая": "textures/Бирюза-Т.jpg",
+    "ПВХ Лиственница крем": "textures/4.png",
+    "ПВХ Лиственница серая": "textures/Дуб-Янтарь-Горизонт-Т.jpg",
+    "ПВХ Лиственница темная": "textures/ПВХ Кармин_Т.jpg",
+    "ПВХ НСТ": "textures/Астана-Табачный-Горизонт-Т_4.jpg",
+    "ПВХ ОРЕХ КОНЬЯК": "textures/5.png",
+    "ПВХ Орех NY светлый": "textures/Лиственница-светлая - Т.jpg",
+    "ПВХ Оскуро": "textures/ПВХ Терракота_Т.jpg",
+    "ПВХ Пекан натуральный": "textures/5.png",
+    "ПВХ Пекан темный": "textures/Пекан-темный_Т.jpg",
+    "ПВХ Санторини белый": "textures/ФМ_Американский-орех_T.jpg",
+    "ПВХ Стронг черный": "textures/Холст-латте-Т.jpg",
+    "ПВХ Терракота": "textures/4.png",
+    "ПВХ Ферро": "textures/Бетон-графит_Ч.jpg",
+    "ПВХ Холст вулканический": "textures/Бетон-графит_Ч.jpg",
+    "ПВХ Холст латте": "textures/Пекан-темный_Т.jpg",
+    "ПВХ Холст синий": "textures/Каррара-Т_горизонт.jpg",
+    "ПВХ Черная шагрень": "textures/P_кофе-с-молоком-Т.jpg",
+    "ПВХ Эвкалипт беж": "textures/Дуб-Песок-Горизонт-Т.jpg",
+    "ПВХ Эко малибу": "textures/Астана-Табачный-Горизонт-Т_4.jpg",
+    "ПВХ венге поперечное": "textures/Пекан-натуральный_Т.jpg",
+    "ПВХ лиственница серая": "textures/порошок-коричневый-букле-Ч.jpg",
+    "ФМ Американский орех": "textures/Лиственница-серая-Т.jpg",
+    "ФМ Красное дерево": "textures/Санторини-белый-С_270324.jpg",
+    "ФМ Серое дерево": "textures/Санторини-белый-С_270324.jpg",
+    "ФМ Черное дерево": "textures/Серое-дерево_Береза-Т.jpg",
+    "ШП Каррара": "textures/Гриджио-Т.jpg",
+    "ШП Кедровый": "textures/темно-серый букле графит-Ч.jpg",
+    "ШП Платинум": "textures/ПВХ-Айвори-Т_020226.jpg",
+    "ЭП - RAL": "textures/ЛКП_Зеленый изумруд-Ч.jpg",
+    "букле коричневый": "textures/ПВХ  Орех ларче_Т.jpg",
+    "колоре бруно": "textures/ПВХ  Орех ларче_Т.jpg",
+    "колоре графит": "textures/Каррара-Т_горизонт.jpg",
+    "колоре неро": "textures/Платина-Т_горизонт.jpg",
+    "темно-серый букле графит": "textures/Оскуро-Т.jpg",
+    "черный шелк": "textures/Каррара-Т_горизонт.jpg"
+  },
+  "furniture": {
+    "_comment": "08 фурнитура -> комплект STL. Заполнено случайно.",
+    "_mode": "~auto",
+    "_default": {
+      "handle_stl": "furniture/handles/Ручка Alfa.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "chrome",
+      "plate_stl2": "furniture/naklad/Накладка Border.stl",
+      "plate_finish2": "chrome",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "chrome",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "tokens": {
+      "BOSTON": "furniture/handles/Ручка Boston.stl",
+      "LARGO": "furniture/handles/Ручка Largo.stl",
+      "ALFA": "furniture/handles/Ручка Alfa.stl",
+      "INSPECTOR": "furniture/handles/Ручка INSPECTOR.stl"
+    },
+    "БКР_БН SECR/ЛЕВ_ARENA": {
+      "handle_stl": "furniture/handles/Ручка Alfa.stl",
+      "handle_finish": "white",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "chrome",
+      "plate_stl2": "furniture/naklad/Накладка Border.stl",
+      "plate_finish2": "matte_black",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "chrome",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "БКР_БН SECR_ARENA": {
+      "handle_stl": "furniture/handles/Ручка Boston.stl",
+      "handle_finish": "matte_black",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "white",
+      "plate_stl2": "furniture/naklad/Накладка Border.stl",
+      "plate_finish2": "matte_black",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЗКР_БН КлС_SOLO": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "white",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "brass",
+      "plate_stl2": "furniture/naklad/Накладка Border.stl",
+      "plate_finish2": "matte_black",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "brass",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЗСКВ_БН RL_RL": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "matte_black",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "white",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "matte_black",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКВ_БН RL_RL": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "matte_black",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "matte_black",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "matte_black",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКВ_БН TORXL_TORXL": {
+      "handle_stl": "furniture/handles/Ручка Alfa.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "brass",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "white",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКВ_БН USS_SKY": {
+      "handle_stl": "furniture/handles/Ручка Alfa.stl",
+      "handle_finish": "steel",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "brass",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "steel",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "white",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_БН SECR/ЛЕВ_ARENA": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "steel",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "white",
+      "plate_stl2": "furniture/naklad/Накладка Border.stl",
+      "plate_finish2": "steel",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "brass",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_БН SECR_ARENA": {
+      "handle_stl": "furniture/handles/Ручка INSPECTOR.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "matte_black",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "white",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "chrome",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_БН КлС/ЛЕВ_PAVA": {
+      "handle_stl": "furniture/handles/Ручка INSPECTOR.stl",
+      "handle_finish": "white",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "matte_black",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "white",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_БН КлС_LARGO": {
+      "handle_stl": "furniture/handles/Ручка INSPECTOR.stl",
+      "handle_finish": "matte_black",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "steel",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "steel",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_БН КлС_PAVA": {
+      "handle_stl": "furniture/handles/Ручка INSPECTOR.stl",
+      "handle_finish": "steel",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "brass",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "chrome",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "brass",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_БН МОН_ALFA": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "steel",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "steel",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "chrome",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "chrome",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_БН МОН_BOSTON": {
+      "handle_stl": "furniture/handles/Ручка INSPECTOR.stl",
+      "handle_finish": "brass",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "chrome",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "white",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "white",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_БН МОН_LARGO": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "steel",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "matte_black",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "brass",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_МОН 3D_ALFA": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "brass",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "matte_black",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_МОН 3D_LARGO": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "white",
+      "plate_stl2": "furniture/naklad/Накладка Border.stl",
+      "plate_finish2": "matte_black",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "white",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_МОН 3D_PAVA": {
+      "handle_stl": "furniture/handles/Ручка Alfa.stl",
+      "handle_finish": "white",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "chrome",
+      "plate_stl2": "furniture/naklad/Накладка Border.stl",
+      "plate_finish2": "chrome",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "chrome",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_МОН_ALFA": {
+      "handle_stl": "furniture/handles/Ручка Boston.stl",
+      "handle_finish": "steel",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "brass",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "brass",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_МОН_BOSTON": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "matte_black",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "white",
+      "plate_stl2": "furniture/naklad/Накладка Border.stl",
+      "plate_finish2": "steel",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "white",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХКР_МОН_LARGO": {
+      "handle_stl": "furniture/handles/Ручка Boston.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "steel",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "white",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "chrome",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХСКВ_БН RL_RL": {
+      "handle_stl": "furniture/handles/Ручка INSPECTOR.stl",
+      "handle_finish": "brass",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "white",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "steel",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ХСКВ_БН TORXL_TORXL": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "brass",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "white",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "steel",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "brass",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_AP15_AP15": {
+      "handle_stl": "furniture/handles/Ручка Boston.stl",
+      "handle_finish": "matte_black",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "steel",
+      "plate_stl2": "furniture/naklad/Накладка Border.stl",
+      "plate_finish2": "steel",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "brass",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_MC TORXL_HOGO V": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "steel",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "matte_black",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "chrome",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "white",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_MC TORXL_TP HOGO D": {
+      "handle_stl": "furniture/handles/Ручка INSPECTOR.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "chrome",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "steel",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "matte_black",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_TORXL_HOGO P": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "matte_black",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "steel",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "brass",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_TORXL_TORXL": {
+      "handle_stl": "furniture/handles/Ручка Alfa.stl",
+      "handle_finish": "brass",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "white",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "brass",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_USS_SKY": {
+      "handle_stl": "furniture/handles/Ручка Alfa.stl",
+      "handle_finish": "white",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "matte_black",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "brass",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "chrome",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_БН AP15_AP15": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "chrome",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "matte_black",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "brass",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_БН RL": {
+      "handle_stl": "furniture/handles/Ручка Alfa.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "chrome",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "brass",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_БН RL_RL": {
+      "handle_stl": "furniture/handles/Ручка Boston.stl",
+      "handle_finish": "matte_black",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "steel",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "matte_black",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "matte_black",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_БН TORXL": {
+      "handle_stl": "furniture/handles/Ручка Alfa.stl",
+      "handle_finish": "white",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "white",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "matte_black",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "white",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_БН TORXL_TORXL": {
+      "handle_stl": "furniture/handles/Ручка Boston.stl",
+      "handle_finish": "matte_black",
+      "plate_stl": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish": "brass",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "brass",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "chrome",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКВ_БН USS_SKY": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "brass",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "white",
+      "plate_stl2": "furniture/naklad/Накладка Border.stl",
+      "plate_finish2": "chrome",
+      "latch_stl": "furniture/latch/Поворотник Apecs.stl",
+      "latch_finish": "brass",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКР_БН SECR/ЛЕВ_ARENA": {
+      "handle_stl": "furniture/handles/Ручка INSPECTOR.stl",
+      "handle_finish": "steel",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "brass",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "brass",
+      "latch_stl": "furniture/latch/Поворотник  Крит.stl",
+      "latch_finish": "steel",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКР_БН SECR_ARENA": {
+      "handle_stl": "furniture/handles/Ручка Largo.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Border.stl",
+      "plate_finish": "steel",
+      "plate_stl2": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish2": "brass",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "brass",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    },
+    "ЧКР_КлС_AP14": {
+      "handle_stl": "furniture/handles/Ручка INSPECTOR.stl",
+      "handle_finish": "chrome",
+      "plate_stl": "furniture/naklad/Накладка Интекрон.stl",
+      "plate_finish": "steel",
+      "plate_stl2": "furniture/naklad/Накладка Апекс.stl",
+      "plate_finish2": "chrome",
+      "latch_stl": "furniture/latch/Поворотник Fuaro.stl",
+      "latch_finish": "chrome",
+      "hinge_stl": "furniture/pelta.stl",
+      "hinge_finish": "chrome"
+    }
+  },
+  "frames": {
+    "_comment": "Коробка по модели+размеру; H/W округляются к ближайшему из списка.",
+    "dir": "frame/DELTA",
+    "template": "Gasparini_E5_H{H}_B{W}.stl",
+    "heights": [
+      1950,
+      1970,
+      2000,
+      2030
+    ],
+    "widths": [
+      860,
+      880,
+      900,
+      950,
+      1000,
+      1030,
+      1050
+    ],
+    "_default": "frame/DELTA/Gasparini_E5_H2000_B900.stl"
+  },
+  "environment": {
+    "wall_texture_path": "decor/wall3.jpg",
+    "floor_texture_path": "decor/floor.jpg",
+    "wall_texture_path_inner": "decor/wall.jpg",
+    "floor_texture_path_inner": "decor/floor.jpg",
+    "render_config": "max"
+  },
+  "side": {
+    "_comment": "03 петли -> сторона L/R + кол-во петель.",
+    "_default": {
+      "side": "R",
+      "hinge_count": 2
+    },
+    "3L": {
+      "side": "R",
+      "hinge_count": 3
+    },
+    "3R": {
+      "side": "R",
+      "hinge_count": 3
+    },
+    "L": {
+      "side": "R",
+      "hinge_count": 2
+    },
+    "Lcп": {
+      "side": "R",
+      "hinge_count": 3
+    },
+    "R": {
+      "side": "R",
+      "hinge_count": 2
+    },
+    "Rсп": {
+      "side": "R",
+      "hinge_count": 2
+    }
+  },
+  "peephole": {
+    "_comment": "Глазок при order.peep==true.",
+    "peephole_stl": "furniture/Glaz_103.stl",
+    "peephole_finish": "chrome",
+    "pos_center": "center",
+    "pos_offset": "side-right"
+  }
+}

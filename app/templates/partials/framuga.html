@@ -1,0 +1,178 @@
+<div class="group-box group-box-20">
+    <h3>Данные фрамуги</h3>
+
+    <div class="form-row">
+        <label class="form-label" style="width: auto;">Ширина ф.фрамуги замковой</label>
+        <select class="form-control" name="zff" style="width: 70px;">
+            <option value="85">85</option>
+            <option value="100">100</option>
+            <option value="150">150</option>
+            <option value="200">200</option>
+            <option value="250">250</option>
+            <option value="300">300</option>
+            <option value="350">350</option>
+            <option value="400">400</option>
+            <option value="450">450</option>
+            <option value="500">500</option>
+            <option value="550">550</option>
+        </select>
+    </div>
+    
+    <div class="form-row">
+        <label class="form-label" style="width: auto;">Ширина ф.фрамуги петлевой</label>
+        <select class="form-control" name="pff" style="width: 70px;">
+            <option value="85">85</option>
+            <option value="100">100</option>
+            <option value="150">150</option>
+            <option value="200">200</option>
+            <option value="250">250</option>
+            <option value="300">300</option>
+            <option value="350">350</option>
+            <option value="400">400</option>
+            <option value="450">450</option>
+            <option value="500">500</option>
+            <option value="550">550</option>
+        </select>
+    </div>
+    
+    <div class="form-row">
+        <label class="form-label" style="width: auto;">Высота ф.фрамуги верхней</label>
+        <select class="form-control" name="vff" style="width: 70px;">
+            <option value="85">85</option>
+            <option value="100">100</option>
+            <option value="150">150</option>
+            <option value="200">200</option>
+            <option value="250">250</option>
+            <option value="300">300</option>
+            <option value="350">350</option>
+            <option value="400">400</option>
+            <option value="450">450</option>
+            <option value="500">500</option>
+            <option value="550">550</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label class="form-label" style="width: auto;">Высота ф.фрамуги расчетная</label>
+        <input type="text" class="form-control" name="hff" readonly style="width: 60px;">
+    </div>
+</div>
+
+<div class="group-box group-box-21">
+    <h3>Данные двери</h3>
+    
+    <div class="form-row">
+        <label class="form-label">Модель</label>
+        <input type="text" class="form-control" id="door-model-dup" readonly>
+    </div>
+    <div class="form-row">
+        <label class="form-label">Ширина</label>
+        <input type="text" class="form-control" id="door-width-dup" readonly>
+    </div>
+    <div class="form-row">
+        <label class="form-label">Высота</label>
+        <input type="text" class="form-control" id="door-height-dup" readonly>
+    </div>
+    <div class="form-row">
+        <label class="form-label">Петли</label>
+        <input type="text" class="form-control" id="door-side-dup" readonly>
+    </div>
+</div>
+
+<div class="group-box group-box-22">
+    <h3>Отделка</h3>
+    
+    <div style="display: flex; align-items: center; gap: 60px;">
+        <div class="form-row">
+            <label class="form-label">Лицо(цвет)</label>
+            <input type="text" class="form-control" id="door-out-color-dup" readonly style="width: 150px;">
+        </div>
+        <div class="form-row">
+            <label class="form-label">Фурнитура</label>
+            <input type="text" class="form-control" id="door-furniture-dup" readonly style="width: 150px;">
+        </div>
+    </div>
+    
+    <div style="display: flex; align-items: center; gap: 60px;">
+        <div class="form-row">
+            <label class="form-label">Рисунок</label>
+            <select class="form-control" id="ff-pic" name="ff_pic" style="width: 150px;">
+                <option value="">-Выбрать</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label class="form-label">Монтаж</label>
+            <input type="text" class="form-control" id="door-montage-dup" readonly style="width: 150px;">
+        </div>
+    </div>
+    <div class="form-row">
+        <label class="form-label">ФФ1/ФФ2</label>
+        <input type="text" class="form-control" id="ff-type" readonly style="width: 150px;">
+    </div>
+</div>
+
+<button class="button sketch-but2">Эскиз</button>
+
+<div class="group-box group-box-23">
+    <h3>Артикулы для выгрузки</h3>
+    
+    <!-- Замковая -->
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+        <label class="form-label" style="width: 170px; flex-shrink: 0; white-space: nowrap; margin: 0; box-sizing: border-box;">Ф.фрамуга замковая</label>
+        <input type="text" class="form-control" id="zff-copy" readonly style="width: 500px; flex: 0 0 500px; height: 32px; box-sizing: border-box; padding: 0 8px; font-family: monospace;">
+        <button type="button" onclick="copyToClipboard('zff-copy', this)" style="width: 36px; height: 32px; flex-shrink: 0; box-sizing: border-box; padding: 0; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; background: #f8f9fa; border-radius: 4px; cursor: pointer; font-size: 16px; line-height: 1;">📋</button>
+    </div>
+    
+    <!-- Петлевая -->
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+        <label class="form-label" style="width: 170px; flex-shrink: 0; white-space: nowrap; margin: 0; box-sizing: border-box;">Ф.фрамуга петлевая</label>
+        <input type="text" class="form-control" id="pff-copy" readonly style="width: 500px; flex: 0 0 500px; height: 32px; box-sizing: border-box; padding: 0 8px; font-family: monospace;">
+        <button type="button" onclick="copyToClipboard('pff-copy', this)" style="width: 36px; height: 32px; flex-shrink: 0; box-sizing: border-box; padding: 0; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; background: #f8f9fa; border-radius: 4px; cursor: pointer; font-size: 16px; line-height: 1;">📋</button>
+    </div>
+
+    <!-- Верхняя -->
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+        <label class="form-label" style="width: 170px; flex-shrink: 0; white-space: nowrap; margin: 0; box-sizing: border-box;">Ф.фрамуга верхняя</label>
+        <input type="text" class="form-control" id="vff-copy" readonly style="width: 500px; flex: 0 0 500px; height: 32px; box-sizing: border-box; padding: 0 8px; font-family: monospace;">
+        <button type="button" onclick="copyToClipboard('vff-copy', this)" style="width: 36px; height: 32px; flex-shrink: 0; box-sizing: border-box; padding: 0; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; background: #f8f9fa; border-radius: 4px; cursor: pointer; font-size: 16px; line-height: 1;">📋</button>
+    </div>
+</div>
+
+<!-- 📋 Скрипт копирования (работает на HTTP и HTTPS) -->
+<script>
+function copyToClipboard(inputId, btn) {
+    const input = document.getElementById(inputId);
+    if (!input || !input.value) return;
+    
+    // Создаём временное текстовое поле
+    const temp = document.createElement('textarea');
+    temp.value = input.value;
+    temp.style.position = 'fixed';
+    temp.style.left = '-9999px';
+    temp.style.top = '0';
+    document.body.appendChild(temp);
+    
+    // Выделяем и копируем
+    temp.select();
+    temp.setSelectionRange(0, 99999); // Для мобильных
+    
+    try {
+        const success = document.execCommand('copy');
+        // Визуальная обратная связь
+        const original = btn.textContent;
+        btn.textContent = success ? '✅' : '❌';
+        setTimeout(() => { btn.textContent = original; }, 1000);
+    } catch (err) {
+        console.error('❌ Не удалось скопировать:', err);
+        btn.textContent = '❌';
+        setTimeout(() => { btn.textContent = '📋'; }, 1500);
+    }
+    
+    // Убираем временное поле
+    document.body.removeChild(temp);
+}
+</script>
+
+<div class="image-container image-label2" id="img_label2">
+    <span>Изображение будет здесь</span>
+</div>

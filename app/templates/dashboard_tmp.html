@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MainWindow</title>
+
+    <head>
+    <!-- ... -->
+    <link href="{{ url_for('static', filename='css/dashboard.css') }}" rel="stylesheet">
+    </head>
+    
+    <!-- Подключаем стили -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 11pt;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .main-window {
+            width: 1760px;
+            height: 920px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 10px;
+            position: relative;
+        }
+
+        .frame {
+            width: 1740px;
+            height: 900px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+            background: white;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-window">
+        <div class="frame">
+            <div class="tabs-header">
+                <button class="tab-button active" data-tab="tab1">Основная</button>
+                <button class="tab-button" data-tab="tab2">Фальшфрамуга</button>
+            </div>
+
+            <!-- ВКЛАДКА 1-->
+            <div id="tab1" class="tab-content active">
+                <div class="layout-container">
+                    {% include 'partials/main_characteristics.html' %}
+                    {% include 'partials/options.html' %}
+                    {% include 'partials/image_section.html' %}
+                    {% include 'partials/order_notes.html' %}
+                    {% include 'partials/economic_calculation.html' %}
+                    {% include 'partials/peephole.html' %}
+                    {% include 'partials/customer.html' %}
+                    {% include 'partials/text_info.html' %}
+                    {% include 'partials/archive_search.html' %}
+                    {% include 'partials/line_1c.html' %}
+                    {% include 'partials/buttons.html' %}
+                    {% include 'partials/tdot.html' %}
+                    {% include 'partials/door_amount.html' %}
+                    
+                    <!-- Версия -->
+                    <div class="version-label" id="lbl_ver"></div>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab-content">
+                <div class="layout-container">
+                    {% include 'partials/framuga.html' %}
+                    <div class="version-label" id="lbl_ver"></div>
+                </div>
+
+        </div>
+    </div>
+
+    <!-- Подключаем скрипты -->
+    {% include 'partials/scripts.html' %}
+
+</body>
+</html>

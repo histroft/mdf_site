@@ -1,0 +1,117 @@
+<div class="group-box group-box-1">
+            <h3>Основные характеристики</h3>
+            
+            <div class="form-row">
+                <label class="form-label">Модель</label>
+                <select class="form-control" name="model_combo" id="model-combo" style="width: 200px;">
+                    <option value="">-Выбрать-</option>
+                    {% for model in list_models %}
+                    <option value="{{ model }}">{{ model }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label">Ширина</label>
+                <input type="text" class="form-control" name="width_inp" id="width-inp">
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label">Высота</label>
+                <input type="text" class="form-control" name="height_inp" id="height-inp">
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label">Петли</label>
+                <select class="form-control" name="side_combo" style="width: 121px;">
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label word-wrap">Наружная отделка (цвет)</label>
+                <select
+                    class="form-control"
+                    name="out_color"
+                    style="width: 200px;"
+                    data-texture-preview="finish"
+                    data-preview-endpoint="{{ url_for('main.preview_finish_texture') }}"
+                >
+                    <option>-Выбрать</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label word-wrap">Наружная отделка (рисунок)</label>
+                <select
+                    class="form-control"
+                    name="out_pic"
+                    style="width: 200px;"
+                    data-texture-preview="design"
+                    data-preview-endpoint="{{ url_for('main.preview_door_design') }}"
+                >
+                    <option>-Выбрать</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label word-wrap">Внутренняя отделка (цвет)</label>
+                <select
+                    class="form-control"
+                    name="in_color"
+                    style="width: 200px;"
+                    data-texture-preview="finish"
+                    data-preview-endpoint="{{ url_for('main.preview_finish_texture') }}"
+                >
+                    <option>-Выбрать</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label word-wrap">Внутренняя отделка (рисунок)</label>
+                <select
+                    class="form-control"
+                    name="in_pic"
+                    style="width: 200px;"
+                    data-texture-preview="design"
+                    data-preview-endpoint="{{ url_for('main.preview_door_design') }}"
+                >
+                    <option>-Выбрать</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label">Фурнитура</label>
+                <select class="form-control" name="furniture" style="width: 200px;">
+                    <option>-Выбрать</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label">Монтаж</label>
+                <select class="form-control" name="montage_combo" style="width: 200px;">
+                    <option>-Выбрать</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label">Наличник</label>
+                <select class="form-control" name="trim_combo" style="width: 200px;">
+                    <option>-Выбрать</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label">Наличник цвет</label>
+                <select
+                    class="form-control"
+                    name="trim_color_combo"
+                    style="width: 200px;"
+                    data-texture-preview="finish"
+                    data-preview-endpoint="{{ url_for('main.preview_finish_texture') }}"
+                >
+                    <option value="">-Выбрать</option>
+                </select>
+            </div>
+    
+    <!-- Остальные поля характеристик... -->
+</div>

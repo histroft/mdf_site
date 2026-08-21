@@ -1,0 +1,25 @@
+/* Кастомные стили Bootstrap на основе Figma дизайна */
+:root {
+    --bs-primary: #007bff;
+    --bs-primary-rgb: 0, 123, 255;
+    --bs-secondary: #6c757d;
+    --bs-success: #28a745;
+    --bs-border-radius: 12px;
+    --bs-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.card {
+    border: none;
+    border-radius: var(--bs-border-radius);
+    box-shadow: var(--bs-box-shadow);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+}

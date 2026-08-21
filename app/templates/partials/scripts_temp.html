@@ -1,0 +1,1645 @@
+<script>
+class ModelSelector {
+    constructor() {
+        this.selectElement = document.getElementById('model-combo');
+        this.optionsContainer = document.getElementById('options-container');
+        this.isModelLoading = false;
+        this.init();
+    }
+    
+    init() {
+        this.selectElement.addEventListener('change', this.handleChange.bind(this));
+    }
+    
+    async handleChange(event) {
+        const model = event.target.value;
+        
+        if (!model) {
+            this.clearAllDropdowns();
+            this.clearOptions();
+            return;
+        }
+        
+        await this.onModelSelected(model);
+    }
+    
+    async onModelSelected(model) {
+        this.isModelLoading = true; // ✅ Начало загрузки
+        console.log('Выбрана модель:', model);
+        
+        try {
+            const response = await this.getModelData(model);
+            
+            if (response.status === 'success') {
+                const list_chars = response.list_chars;
+                const options = response.list_options || [];
+                
+                this.fillAllDropdowns(list_chars);
+                this.fillOptions(options);
+                console.log('Все списки и опции обновлены');
+            } else {
+                throw new Error(response.message);
+            }
+            
+        } catch (error) {
+            console.error('Ошибка при получении данных модели:', error);
+            this.showError('Ошибка загрузки данных модели');
+        } finally {
+            this.isModelLoading = false; // ✅ Загрузка завершена
+        }
+    }
+    
+    async getModelData(model) {
+        const response = await fetch('/api/select-model', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ model: model })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`Ошибка сервера: ${response.status}`);
+        }
+        
+        return await response.json();
+    }
+    
+    // ==================== МЕТОДЫ ДЛЯ ОПЦИЙ ====================
+    
+    fillOptions(options) {
+        if (!this.optionsContainer) {
+            console.error('Контейнер для опций не найден');
+            return;
+        }
+        
+        // Очищаем предыдущие опции
+        this.clearOptions();
+        
+        // Проверяем наличие данных об опциях
+        if (options && Array.isArray(options)) {
+            
+            if (options.length === 0) {
+                this.showNoOptionsMessage();
+                return;
+            }
+            
+            // Создаем чекбоксы для каждой опции
+            options.forEach((option, index) => {
+                this.createOptionCheckbox(option, index + 1);
+            });
+            
+            console.log('Заполнены опции:', options);
+        } else {
+            console.warn('Данные об опциях отсутствуют или не являются массивом:', options);
+            this.showNoOptionsMessage();
+        }
+    }
+    
+    createOptionCheckbox(optionName, index) {
+        const checkboxItem = document.createElement('div');
+        checkboxItem.className = 'checkbox-item';
+        
+        const checkboxId = `option_check_${index}`;
+        
+        checkboxItem.innerHTML = `
+            <input type="checkbox" id="${checkboxId}" name="${checkboxId}" value="${optionName}">
+            <label for="${checkboxId}">${optionName}</label>
+        `;
+        
+        this.optionsContainer.appendChild(checkboxItem);
+    }
+    
+    clearOptions() {
+        if (this.optionsContainer) {
+            this.optionsContainer.innerHTML = '';
+        }
+    }
+    
+    showNoOptionsMessage() {
+        if (this.optionsContainer) {
+            this.optionsContainer.innerHTML = `
+                <div class="no-options-message">
+                    Нет доступных опций для выбранной модели
+                </div>
+            `;
+        }
+    }
+    
+    // ==================== УНИВЕРСАЛЬНЫЕ МЕТОДЫ ====================
+    
+    fillDropdown(selectName, dataKey, list_chars, logName) {
+        const selectElement = document.querySelector(`select[name="${selectName}"]`);
+        
+        if (!selectElement) {
+            console.error(`Элемент select[name="${selectName}"] не найден`);
+            return;
+        }
+        
+        selectElement.innerHTML = '<option value="">-Выбрать-</option>';
+        
+        if (list_chars && list_chars[dataKey] && Array.isArray(list_chars[dataKey])) {
+            const options = list_chars[dataKey];
+            
+            options.forEach(value => {
+                const option = document.createElement('option');
+                option.value = value;
+                option.textContent = value;
+                selectElement.appendChild(option);
+            });
+            
+            console.log(`Заполнен список ${logName}:`, options);
+        } else {
+            console.warn(`Данные о ${logName} отсутствуют:`, list_chars);
+            this.addNoDataOption(selectElement);
+        }
+    }
+    
+    clearDropdown(selectName) {
+        const selectElement = document.querySelector(`select[name="${selectName}"]`);
+        if (selectElement) {
+            selectElement.innerHTML = '<option value="">-Выбрать-</option>';
+        }
+    }
+    
+    addNoDataOption(selectElement) {
+        const option = document.createElement('option');
+        option.value = 'no_data';
+        option.textContent = 'Данные не найдены';
+        option.disabled = true;
+        selectElement.appendChild(option);
+    }
+    
+    showError(message) {
+        console.error('UI Error:', message);
+        // Можно заменить на toast-уведомление
+        alert(message);
+    }
+    
+    // ==================== МЕТОДЫ ЗАПОЛНЕНИЯ ВСЕХ СПИСКОВ ====================
+    
+    fillAllDropdowns(list_chars) {
+        // Заполняем ширину и высоту
+        //this.fillWidthDropdown(list_chars);
+        //this.fillHeightDropdown(list_chars);
+        
+        // Остальные характеристики
+        this.fillPetliDropdown(list_chars);
+        this.fillOutColorDropdown(list_chars);
+        this.fillOutPicDropdown(list_chars);
+        this.fillInColorDropdown(list_chars);
+        this.fillInPicDropdown(list_chars);
+        this.fillFurnitureDropdown(list_chars);
+        this.fillMontageDropdown(list_chars);
+        this.fillTrimsDropdown(list_chars);
+        this.fillTrimsColorDropdown(list_chars);
+    }
+    
+    clearAllDropdowns() {
+        this.clearWidthDropdown();
+        this.clearHeightDropdown();
+        this.clearPetliDropdown();
+        this.clearOutColorDropdown();
+        this.clearOutPicDropdown();
+        this.clearInColorDropdown();
+        this.clearInPicDropdown();
+        this.clearFurnitureDropdown();
+        this.clearMontageDropdown();
+        this.clearTrimsDropdown();
+        this.clearTrimsColorDropdown();
+    }
+    
+    // ==================== КОНКРЕТНЫЕ МЕТОДЫ ДЛЯ КАЖДОГО СПИСКА ====================
+    
+    // Ширина
+    fillWidthDropdown(list_chars) {
+        this.fillDropdown('width_inp', '01_Ширина', list_chars, 'ширины');
+    }
+    
+    clearWidthDropdown() {
+        const widthInput = document.querySelector('input[name="width_inp"]');
+        if (widthInput) {
+            widthInput.value = '';
+        }
+    }
+    
+    // Высота
+    fillHeightDropdown(list_chars) {
+        this.fillDropdown('height_inp', '02_Высота', list_chars, 'высоты');
+    }
+    
+    clearHeightDropdown() {
+        const heightInput = document.querySelector('input[name="height_inp"]');
+        if (heightInput) {
+            heightInput.value = '';
+        }
+    }
+    
+    // Петли
+    fillPetliDropdown(list_chars) {
+        this.fillDropdown('side_combo', '03_Петли', list_chars, 'петель');
+    }
+    
+    clearPetliDropdown() {
+        this.clearDropdown('side_combo');
+    }
+    
+    // Наружная отделка (цвет)
+    fillOutColorDropdown(list_chars) {
+        this.fillDropdown('out_color', '04_Лицо (цвет)', list_chars, 'наружной отделки (цвет)');
+    }
+    
+    clearOutColorDropdown() {
+        this.clearDropdown('out_color');
+    }
+    
+    // Наружная отделка (рисунок)
+    fillOutPicDropdown(list_chars) {
+        this.fillDropdown('out_pic', '05_Лицо (рисунок)', list_chars, 'наружной отделки (рисунок)');
+    }
+    
+    clearOutPicDropdown() {
+        this.clearDropdown('out_pic');
+    }
+    
+    // Внутренняя отделка (цвет)
+    fillInColorDropdown(list_chars) {
+        this.fillDropdown('in_color', '06_Внутр. отделка (цвет)', list_chars, 'внутренней отделки (цвет)');
+    }
+    
+    clearInColorDropdown() {
+        this.clearDropdown('in_color');
+    }
+    
+    // Внутренняя отделка (рисунок)
+    fillInPicDropdown(list_chars) {
+        this.fillDropdown('in_pic', '07_Внутр. отделка (рисунок)', list_chars, 'внутренней отделки (рисунок)');
+    }
+    
+    clearInPicDropdown() {
+        this.clearDropdown('in_pic');
+    }
+    
+    // Фурнитура
+    fillFurnitureDropdown(list_chars) {
+        this.fillDropdown('furniture', '08_Фурнитура', list_chars, 'фурнитуры');
+    }
+    
+    clearFurnitureDropdown() {
+        this.clearDropdown('furniture');
+    }
+    
+    // Монтаж
+    fillMontageDropdown(list_chars) {
+        this.fillDropdown('montage_combo', '09_Монтаж', list_chars, 'монтажа');
+    }
+    
+    clearMontageDropdown() {
+        this.clearDropdown('montage_combo');
+    }
+    
+    // Обналичка
+    fillTrimsDropdown(list_chars) {
+        this.fillDropdown('trim_combo', '10_Обналичка', list_chars, 'обналички');
+    }
+    
+    clearTrimsDropdown() {
+        this.clearDropdown('trim_combo');
+    }
+    
+    // Обналичка цвет
+    fillTrimsColorDropdown(list_chars) {
+        this.fillDropdown('trim_color_combo', '11_Обналичка (цвет)', list_chars, 'цвета обналички');
+    }
+    
+    clearTrimsColorDropdown() {
+        this.clearDropdown('trim_color_combo');
+    }
+    
+}
+
+// ==================== ИНИЦИАЛИЗАЦИЯ И ДОПОЛНИТЕЛЬНЫЕ ОБРАБОТЧИКИ ====================
+
+// ==================== УТИЛИТЫ ДЛЯ РАБОТЫ С ОПЦИЯМИ ====================
+
+const OptionsManager = {
+    // Получить выбранные опции
+    getSelectedOptions() {
+        const selectedOptions = [];
+        const checkboxes = document.querySelectorAll('#options-container input[type="checkbox"]:checked');
+        
+        checkboxes.forEach(checkbox => {
+            selectedOptions.push({
+                id: checkbox.id,
+                name: checkbox.name,
+                value: checkbox.value
+            });
+        });
+        
+        return selectedOptions;
+    },
+    
+    // Получить выбранные опции в виде простого массива значений
+    getSelectedOptionValues() {
+        const selectedValues = [];
+        const checkboxes = document.querySelectorAll('#options-container input[type="checkbox"]:checked');
+        
+        checkboxes.forEach(checkbox => {
+            selectedValues.push(checkbox.value);
+        });
+        
+        return selectedValues;
+    },
+    
+    // Сбросить все опции
+    resetOptions() {
+        const checkboxes = document.querySelectorAll('#options-container input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+    },
+    
+    // Подсчитать количество выбранных опций
+    countSelectedOptions() {
+        return document.querySelectorAll('#options-container input[type="checkbox"]:checked').length;
+    }
+};
+
+// Дополнительные утилиты для форм
+const FormUtils = {
+    // Создание выпадающего списка для input поля
+    createDropdownForInput(inputElement, options) {
+        if (!inputElement || !options || !Array.isArray(options)) return;
+        
+        // Создаем datalist
+        const dataListId = `${inputElement.name}_list`;
+        let dataList = document.getElementById(dataListId);
+        
+        if (!dataList) {
+            dataList = document.createElement('datalist');
+            dataList.id = dataListId;
+            document.body.appendChild(dataList);
+            inputElement.setAttribute('list', dataListId);
+        }
+        
+        // Очищаем и заполняем datalist
+        dataList.innerHTML = '';
+        options.forEach(option => {
+            const dataOption = document.createElement('option');
+            dataOption.value = option;
+            dataList.appendChild(dataOption);
+        });
+    },
+    
+    getFormData(formElement) {
+        if (!formElement) return {};
+        
+        const formData = new FormData(formElement);
+        const data = {};
+        
+        for (let [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+        
+        // Добавляем выбранные опции
+        data.selectedOptions = OptionsManager.getSelectedOptionValues();
+        
+        return data;
+    }
+};
+
+// Инициализация утилит
+document.addEventListener('DOMContentLoaded', function() {
+    // Для полей ширины и высоты добавляем автодополнение
+    const widthInput = document.querySelector('input[name="width_inp"]');
+    const heightInput = document.querySelector('input[name="height_inp"]');
+    
+    if (widthInput) {
+        widthInput.addEventListener('focus', function() {
+            this.setAttribute('autocomplete', 'off');
+        });
+    }
+    
+    if (heightInput) {
+        heightInput.addEventListener('focus', function() {
+            this.setAttribute('autocomplete', 'off');
+        });
+    }
+
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+            
+            // Скрыть все вкладки
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Убрать активность со всех кнопок
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            // Показать нужную вкладку
+            document.getElementById(tabId).classList.add('active');
+            // Подсветить кнопку
+            this.classList.add('active');
+        });
+    });
+});
+</script>
+
+
+
+
+
+
+<script>
+
+    // КНОПКИ!!!!-=-============================================
+class ButtonsHandler {
+    constructor(modelSelector) {
+        this.modelSelector = modelSelector;
+        this.isCheckPassed = false;  // Флаг успешной проверки
+        this.init();
+        this.setupFormChangeTracking(); // Добавляем отслеживание изменений формы
+    }
+    
+    init() {
+        this.setupClearButton();
+        this.setupCheckButton();
+        this.setupPdfButton();
+        this.setupPriceButton();
+        this.setupSketchButton();
+        this.setupArchiveSearch();
+    }
+    
+    // ==================== КНОПКА ОЧИСТКИ ====================
+    setupClearButton() {
+        const clearButton = document.querySelector('.clear-but');
+        if (clearButton) {
+            clearButton.addEventListener('click', () => {
+                this.clearAllFields(true);
+            });
+        }
+    }
+    
+    clearAllFields(clBut=false) {
+        // Сбрасываем выбор модели
+        const modelSelect = document.getElementById('model-combo');
+        if (modelSelect) {
+            modelSelect.value = '';
+        }
+        
+        // Очищаем динамические списки через ModelSelector
+        if (this.modelSelector) {
+            this.modelSelector.clearAllDropdowns();
+            this.modelSelector.clearOptions();
+        }
+        
+        // Очищаем текстовые поля
+        this.clearTextFields();
+        
+        // Сбрасываем чекбоксы опций
+        this.clearOptionsCheckboxes();
+        
+        // ✅ Сбрасываем статические селекты (сохраняя их опции)
+        this.clearStaticDropdowns();
+        
+        // Очищаем текстовые области
+        this.clearAdditionalFields();
+        
+        this.clear1CField();
+
+        if (clBut == true) location.reload();
+
+        
+        console.log('Все поля очищены');
+    }
+
+    clear1CField() {
+        const line1cElement = document.querySelector('textarea[name="line_1c"]');
+        if (line1cElement) {
+            line1cElement.value = '';
+        }
+    }
+
+    
+
+    clearStaticDropdowns() {
+        const staticSelects = [
+            'peep_combo',      // Глазок
+            'head',            // Надставка (да/нет) - исправлено!
+            'head_pic_in',     // Рисунок надставки внутри
+            'head_pic_out',    // Рисунок надставки снаружи
+            'price_type',      // Тип цены
+            'vff', 'zff', 'pff' // Фальшфрамуга
+        ];
+
+        staticSelects.forEach(name => {
+            const select = document.querySelector(`select[name="${name}"]`);
+            if (select && select.options.length > 0) {
+                select.value = '';  // Сбрасываем выбор
+                select.dispatchEvent(new Event('change'));
+            }
+        });
+    }
+    
+    clearTextFields() {
+        const textFields = document.querySelectorAll('input[type="text"]');
+        textFields.forEach(field => {
+            field.value = '';
+        });
+    }
+    
+    clearOptionsCheckboxes() {
+        const checkboxes = document.querySelectorAll('#options-container input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+    }
+    
+    clearAdditionalFields() {
+        // ✅ УДАЛЕНО: очистка селектов через innerHTML (чтобы не ломать статические)
+        
+        // Очищаем только текстовые области
+        const textareas = document.querySelectorAll('textarea');
+        textareas.forEach(textarea => {
+            textarea.value = '';
+        });
+        
+        // Очищаем числовые/текстовые input'ы, которые не входят в другие группы
+        const additionalInputs = document.querySelectorAll('input[name="ff_pic"], input[name="height_head"], input[name="TDOT"], input[name="count"], input[name="percent_base_price"]');
+        additionalInputs.forEach(input => {
+            if (input.type === 'number' || input.type === 'text') {
+                input.value = '';
+            }
+        });
+    }
+    
+    // ==================== КНОПКА ПРОВЕРКИ ====================
+  setupCheckButton() {
+        const checkButton = document.querySelector('.check-but');
+        if (checkButton) {
+            checkButton.addEventListener('click', () => {
+                this.performCheck();
+            });
+        }
+    }
+    
+    async performCheck() {
+        console.log('Проверка данных...');
+        
+        try {
+            this.showLoading(true);
+            
+            // ✅ Сбросить старую подсветку
+            this.resetAllHighlights()
+            
+            const formData = this.prepareDataForPython();
+            const validationResult = this.validateForm(formData);
+            
+            if (!validationResult.isValid) {
+                this.showErrorMessage(`Ошибка проверки: ${validationResult.errors.join(', ')}`);
+                return;
+            }
+            
+            const result = await this.sendCheckRequest(formData);
+            this.displayCheckResult(result);
+            
+            // ✅ Подсветка нестандартных полей
+            if (result.non_standard_fields) {
+                this.highlightFields(result.non_standard_fields);
+            }
+            
+            // ✅ Подсветка проблемных полей (если запрет)
+            if (result.problem_fields) {
+                this.highlightFields(result.problem_fields);
+            }
+            
+        } catch (error) {
+            console.error('Ошибка при проверке:', error);
+            this.showErrorMessage('Ошибка при выполнении проверки');
+        } finally {
+            this.showLoading(false);
+        }
+    }
+
+
+    getFieldSelector(key) {
+        const map = {
+            '01_Ширина': 'input[name="width_inp"]',
+            '02_Высота': 'input[name="height_inp"]',
+            '03_Петли': 'select[name="side_combo"]',
+            '04_Лицо (цвет)': 'select[name="out_color"]',
+            '05_Лицо (рисунок)': 'select[name="out_pic"]',
+            '06_Внутр. отделка (цвет)': 'select[name="in_color"]',
+            '07_Внутр. отделка (рисунок)': 'select[name="in_pic"]',
+            '08_Фурнитура': 'select[name="furniture"]',
+            '09_Монтаж': 'select[name="montage_combo"]',
+            '10_Обналичка': 'select[name="trim_combo"]',
+            '11_Обналичка (цвет)': 'select[name="trim_color_combo"]',
+            'peep': 'select[name="peep_combo"]',
+        };
+        return map[key] || null;
+    }
+
+    highlightField(key) {
+        const selector = this.getFieldSelector(key);
+        if (!selector) return;
+        
+        const el = document.querySelector(selector);
+        if (el) el.classList.add('field-error');
+        
+        // Подсветить label рядом
+        const label = el.closest('.form-row')?.querySelector('.form-label');
+        if (label) label.classList.add('label-error');
+    }
+
+    clearHighlight(key) {
+        const selector = this.getFieldSelector(key);
+        if (!selector) return;
+        
+        const el = document.querySelector(selector);
+        if (el) el.classList.remove('field-error');
+        
+        const label = el.closest('.form-row')?.querySelector('.form-label');
+        if (label) label.classList.remove('label-error');
+    }
+
+    resetAllHighlights() {
+        document.querySelectorAll('.field-error').forEach(el => el.classList.remove('field-error'));
+        document.querySelectorAll('.label-error').forEach(el => el.classList.remove('label-error'));
+    }
+
+    highlightFields(fieldList) {
+        if (!fieldList || !Array.isArray(fieldList)) return;
+        this.resetAllHighlights();
+        fieldList.forEach(key => this.highlightField(key));
+    }
+    
+// ==================== ПОДГОТОВКА ДАННЫХ (исправленная версия) ====================
+    prepareDataForPython() {
+        const peepComboElement = document.querySelector('select[name="peep_combo"]');
+        const peepCombo = peepComboElement ? peepComboElement.value : '';
+        
+        // Логика глазка
+        let peep = false;
+        let peep_offset = false;
+        
+        if (peepCombo === "Без глазка") {
+            peep = false; peep_offset = false;
+        } else if (peepCombo === "Глазок по центру") {
+            peep = true; peep_offset = false;
+        } else if (peepCombo === "Глазок сбоку") {
+            peep = true; peep_offset = true;
+        }
+        
+        // Получаем название модели
+        const modelValue = document.querySelector('select[name="model_combo"]')?.value || '';
+        const isPanel = modelValue.toLowerCase().includes('панель');
+        
+        console.log('📌 Тип изделия:', isPanel ? 'Панель' : 'Дверь');
+        console.log('📌 Модель:', modelValue);
+        
+        // Надставка - для панелей не нужна
+        const headSelect = document.querySelector('select[name="head"]');
+        const headValue = headSelect ? headSelect.value : 'Без надставки';
+        const hasHead = headValue === 'С надставкой';
+        
+        // Базовые поля для всех типов
+        const baseData = {
+            'model': modelValue,
+            '01_Ширина': document.querySelector('input[name="width_inp"]')?.value || '',
+            '02_Высота': document.querySelector('input[name="height_inp"]')?.value || '',
+            '03_Петли': document.querySelector('select[name="side_combo"]')?.value || '',
+            'count': parseInt(document.querySelector('input[name="count"]')?.value) || 1,
+            'notes': document.querySelector('textarea[name="order_notes"]')?.value || '',
+            'order_name': document.querySelector('input[name="customer_inp"]')?.value || 'Не указан',
+            'write_to_DB': true
+        };
+        
+        // Если это панель, собираем только нужные данные
+        if (isPanel) {
+            console.log('🎨 Сбор данных для ПАНЕЛИ');
+            
+            return {
+                ...baseData,
+                // Для панели нужны только эти поля
+                '04_Лицо (цвет)': document.querySelector('select[name="out_color"]')?.value || '',
+                '05_Лицо (рисунок)': document.querySelector('select[name="out_pic"]')?.value || '',
+                '06_Внутр. отделка (цвет)': document.querySelector('select[name="in_color"]')?.value || '',
+                '07_Внутр. отделка (рисунок)': document.querySelector('select[name="in_pic"]')?.value || '',
+                
+                // Остальные поля для панели не нужны
+                '08_Фурнитура': '',
+                '09_Монтаж': '',
+                '10_Обналичка': '',
+                '11_Обналичка (цвет)': '',
+                
+                // Глазок для панели не нужен
+                'peep': false,
+                'peep_offset': false,
+                
+                // Опции
+                'options': OptionsManager.getSelectedOptionValues(),
+                'advance_options': OptionsManager.getSelectedOptionValues(),
+                
+                // Фальшфрамуга для панели не нужна
+                'vff': 0,
+                'zff': 0,
+                'pff': 0,
+                'ff_pic': '',
+                
+                // Надставка для панели не нужна
+                'head': false,
+                'head_pic_in': '',
+                'head_pic_out': '',
+                'height_head': 0,
+                
+                // Цена
+                'percent_base_price': parseFloat(document.querySelector('input[name="percent_base_price"]')?.value) || 0,
+                'price_type': document.querySelector('select[name="price_type"]')?.value || 'Цены ТД ТОРЭКС',
+                'TDOT': document.querySelector('input[name="TDOT"]')?.value || ''
+            };
+        }
+        
+    // Если это дверь, собираем все данные
+    console.log('🚪 Сбор данных для ДВЕРИ');
+    
+    return {
+        ...baseData,
+        '04_Лицо (цвет)': document.querySelector('select[name="out_color"]')?.value || '',
+        '05_Лицо (рисунок)': document.querySelector('select[name="out_pic"]')?.value || '',
+        '06_Внутр. отделка (цвет)': document.querySelector('select[name="in_color"]')?.value || '',
+        '07_Внутр. отделка (рисунок)': document.querySelector('select[name="in_pic"]')?.value || '',
+        '08_Фурнитура': document.querySelector('select[name="furniture"]')?.value || '',
+        '09_Монтаж': document.querySelector('select[name="montage_combo"]')?.value || '',
+        '10_Обналичка': document.querySelector('select[name="trim_combo"]')?.value || '',
+        '11_Обналичка (цвет)': document.querySelector('select[name="trim_color_combo"]')?.value || '',
+        
+        // Глазок
+        'peep': peep,
+        'peep_offset': peep_offset,
+        
+        // Опции
+        'options': OptionsManager.getSelectedOptionValues(),
+        'advance_options': OptionsManager.getSelectedOptionValues(),
+        
+        // Фальшфрамуга
+        'vff': parseInt(document.querySelector('select[name="vff"]')?.value) || 85,
+        'zff': parseInt(document.querySelector('select[name="zff"]')?.value) || 85,
+        'pff': parseInt(document.querySelector('select[name="pff"]')?.value) || 85,
+        'ff_pic': document.querySelector('input[name="ff_pic"]')?.value || '',
+        
+        // Надставка
+        'head': hasHead,
+        'head_pic_in': document.querySelector('select[name="head_pic_in"]')?.value !== 'Без рисунка'
+            ? document.querySelector('select[name="head_pic_in"]')?.value : '', 
+        'head_pic_out': document.querySelector('select[name="head_pic_out"]')?.value !== 'Без рисунка'
+            ? document.querySelector('select[name="head_pic_out"]')?.value : '',
+        'height_head': parseInt(document.querySelector('input[name="height_head"]')?.value) || 0,
+        
+        // Цена
+        'percent_base_price': parseFloat(document.querySelector('input[name="percent_base_price"]')?.value) || 0,
+        'price_type': document.querySelector('select[name="price_type"]')?.value || 'Цены ТД ТОРЭКС',
+        'TDOT': document.querySelector('input[name="TDOT"]')?.value || ''
+     };
+    }
+    
+    getSelectedOptionValues() {
+        const selectedOptions = [];
+        const checkboxes = document.querySelectorAll('#options-container input[type="checkbox"]:checked');
+        checkboxes.forEach(checkbox => {
+            selectedOptions.push(checkbox.value);
+        });
+        return selectedOptions;
+    }
+    
+    validateForm(formData) {
+        const errors = [];
+    const isPanel = formData.model.toLowerCase().includes('панель');
+    
+    if (!formData.model) errors.push('Не выбрана модель');
+    if (!formData['01_Ширина']) errors.push('Не указана ширина');
+    if (!formData['02_Высота']) errors.push('Не указана высота');
+    
+    // Для двери обязательны дополнительные поля
+    if (!isPanel) {
+        if (!formData['03_Петли']) errors.push('Не выбраны петли');
+        if (!formData['04_Лицо (цвет)']) errors.push('Не выбрана наружная отделка (цвет)');
+        if (!formData['06_Внутр. отделка (цвет)']) errors.push('Не выбрана внутренняя отделка (цвет)');
+        if (!formData['08_Фурнитура']) errors.push('Не выбрана фурнитура');
+    } else {
+        // Для панели нужны цвета рисунков
+        if (!formData['04_Лицо (цвет)']) errors.push('Не выбран цвет панели');
+        if (!formData['05_Лицо (рисунок)']) errors.push('Не выбран рисунок панели');
+    }
+    
+    return {
+        isValid: errors.length === 0,
+        errors: errors
+    };
+}
+
+    async sendCheckRequest(formData) {
+        const response = await fetch('/api/check-possibility', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
+        
+        if (!response.ok) {
+            throw new Error(`Ошибка сервера: ${response.status}`);
+        }
+        
+        return await response.json();
+    }
+    
+    //==================================================================================
+    displayCheckResult(result) {
+        console.log('🎯 Результат проверки:', result);
+        
+        // Находим элемент для вывода сообщения
+        const textInfoElement = document.querySelector('textarea.text-edit.text-info[name="text_info"]');
+        
+        if (result.success) {
+            // Успешная проверка
+            const successMessage = `✅ ПРОВЕРКА ПРОЙДЕНА\n\n${result.message}\n\nИзготовление возможно.`;
+            
+            if (textInfoElement) {
+                textInfoElement.value = successMessage;
+                textInfoElement.style.display = 'block';
+                textInfoElement.style.color = 'green';
+                textInfoElement.style.backgroundColor = '#f0f9f0';
+            }
+            
+            // Очищаем подсветку полей
+            this.resetAllHighlights();
+            
+            // Показываем уведомление
+            this.showNotification('✅ Изготовление возможно!', 'success');
+            
+        } else {
+            // Ошибка - показываем подробности
+            let errorMessage = `❌ ИЗГОТОВЛЕНИЕ НЕВОЗМОЖНО\n\n`;
+            errorMessage += `${result.message}\n\n`;
+            
+            if (result.problem_fields && result.problem_fields.length > 0) {
+                errorMessage += `⚠️ Проблемные поля:\n`;
+                result.problem_fields.forEach(field => {
+                    // Преобразуем ключ поля в читаемое название
+                    const fieldName = this.getFieldDisplayName(field);
+                    errorMessage += `  • ${fieldName} (${field})\n`;
+                });
+            }
+            
+            if (textInfoElement) {
+                textInfoElement.value = errorMessage;
+                textInfoElement.style.display = 'block';
+                textInfoElement.style.color = 'red';
+                textInfoElement.style.backgroundColor = '#fff0f0';
+                textInfoElement.style.fontWeight = 'bold';
+                textInfoElement.style.padding = '10px';
+                textInfoElement.style.border = '1px solid red';
+                textInfoElement.style.borderRadius = '4px';
+            }
+            
+            // Подсвечиваем проблемные поля
+            if (result.problem_fields && result.problem_fields.length > 0) {
+                this.highlightFields(result.problem_fields);
+            }
+            
+            // Показываем уведомление
+            this.showNotification('❌ Изготовление невозможно!', 'error');
+        }
+    }
+
+    // Добавьте метод для получения читаемого названия поля
+    getFieldDisplayName(fieldKey) {
+        const fieldNames = {
+            '01_Ширина': 'Ширина',
+            '02_Высота': 'Высота',
+            '03_Петли': 'Петли',
+            '04_Лицо (цвет)': 'Цвет наружной отделки',
+            '05_Лицо (рисунок)': 'Рисунок наружной отделки',
+            '06_Внутр. отделка (цвет)': 'Цвет внутренней отделки',
+            '07_Внутр. отделка (рисунок)': 'Рисунок внутренней отделки',
+            '08_Фурнитура': 'Фурнитура',
+            '09_Монтаж': 'Монтаж',
+            '10_Обналичка': 'Обналичка',
+            '11_Обналичка (цвет)': 'Цвет обналички'
+        };
+        return fieldNames[fieldKey] || fieldKey;
+    }
+
+    // Добавьте метод для показа уведомлений (если нет)
+    showNotification(message, type) {
+        // Пробуем найти элемент для уведомлений
+        let notificationDiv = document.getElementById('notification-area');
+        if (!notificationDiv) {
+            // Создаем, если нет
+            notificationDiv = document.createElement('div');
+            notificationDiv.id = 'notification-area';
+            notificationDiv.style.position = 'fixed';
+            notificationDiv.style.top = '20px';
+            notificationDiv.style.right = '20px';
+            notificationDiv.style.zIndex = '9999';
+            document.body.appendChild(notificationDiv);
+        }
+        
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `notification ${type}`;
+        alertDiv.style.backgroundColor = type === 'success' ? '#4CAF50' : '#f44336';
+        alertDiv.style.color = 'white';
+        alertDiv.style.padding = '15px';
+        alertDiv.style.marginBottom = '10px';
+        alertDiv.style.borderRadius = '4px';
+        alertDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+        alertDiv.style.minWidth = '300px';
+        alertDiv.style.maxWidth = '500px';
+        alertDiv.innerHTML = message;
+        
+        notificationDiv.appendChild(alertDiv);
+        
+        // Автоматически удаляем через 5 секунд
+        setTimeout(() => {
+            alertDiv.remove();
+        }, 5000);
+    }
+    //==================================================================================
+        
+    showLoading(show) {
+        const checkButton = document.querySelector('.check-but');
+        if (checkButton) {
+            if (show) {
+                checkButton.disabled = true;
+                checkButton.innerHTML = 'Проверка...';
+            } else {
+                checkButton.disabled = false;
+                checkButton.innerHTML = 'Проверка';
+            }
+        }
+    }
+    
+    showErrorMessage(message) {
+        alert(message);
+    }
+    
+    
+    // ==================== КНОПКА PDF — ИСПРАВЛЕННАЯ ВЕРСИЯ ====================
+    setupPdfButton() {
+        const pdfButton = document.querySelector('.pdf-but');
+        if (pdfButton) {
+            pdfButton.addEventListener('click', () => this.generatePDF());
+        }
+    }
+
+    showLoadingPDF(show) {
+        const checkButton = document.querySelector('.pdf-but');
+        if (checkButton) {
+            if (show) {
+                checkButton.disabled = true;
+                checkButton.innerHTML = '⏳Создание...';
+            } else {
+                checkButton.disabled = false;
+                checkButton.innerHTML = 'Договор';
+            }
+        }
+    }
+
+async generatePDF() {
+    console.log('📄 Создание договора...');
+    
+    const data = this.prepareDataForPython();
+    const validationResult = this.validateForm(data);
+    
+    this.clear1CField();
+    
+    if (!validationResult.isValid) {
+        alert(`Нельзя создать договор: ${validationResult.errors.join(', ')}`);
+        return;
+    }
+    
+    this.showLoadingPDF(true);
+    
+    try {
+        this.resetAllHighlights();
+        
+        const response = await fetch('/api/make-order', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ data: data })
+        });
+        
+        if (!response.ok && response.status !== 400) {
+            const errorText = await response.text().catch(() => '');
+            throw new Error(`Ошибка сервера: ${response.status} ${errorText}`);
+        }
+        
+        const result = await response.json();
+        
+        // ✅ Отображаем результат расчета в окне "Расчет цены"
+        const priceTextarea = document.querySelector('textarea[name="text_info_2"]');
+        if (priceTextarea && result.info) {
+            const infoText = Array.isArray(result.info) 
+                ? result.info.join('\n') 
+                : (typeof result.info === 'string' ? result.info : JSON.stringify(result.info, null, 2));
+            
+            priceTextarea.value = infoText;
+            priceTextarea.style.display = 'block';
+            priceTextarea.scrollTop = priceTextarea.scrollHeight;
+            
+            if (result.total_price) {
+                priceTextarea.value += `\n\n💵 ИТОГО: ${result.total_price.toLocaleString('ru-RU')} ₽`;
+            }
+            
+            console.log('💰 Результат расчета отображен в окне text_info_2');
+        }
+        
+        // Проверка: Изготовление запрещено
+        if (!result.success && result.can_make === false) {
+            if (result.problem_fields && Array.isArray(result.problem_fields)) {
+                this.highlightFields(result.problem_fields);
+            }
+            alert(`❌ Нельзя создать договор:\n${result.message}`);
+            return;
+        }
+        
+        // Успешное создание
+        if (result.success) {
+            alert('✅ Договор создан успешно!');
+            
+            if (result.pdf_url) {
+                window.open(result.pdf_url, '_blank');
+            }
+            
+            // ✅ Показываем эскиз в img_label
+            if (result.sketch_url || result.contract_id) {
+                await this.showSketch(result.contract_id);
+            }
+            
+            this._update1CString(data);
+            
+            if (priceTextarea && result.contract_id) {
+                priceTextarea.value += `\n\n✅ Договор №${result.contract_id} создан`;
+            }
+        } else {
+            alert(`❌ Ошибка: ${result.message}`);
+            if (result.problem_fields) {
+                this.highlightFields(result.problem_fields);
+            }
+        }
+        
+    } catch (error) {
+        console.error('❌ Ошибка создания договора:', error);
+        alert('Ошибка при создании договора: ' + error.message);
+        
+    } finally {
+        this.showLoadingPDF(false);
+    }
+}
+
+//  ОБНОВЛЕНИЕ СТРОКИ 1С
+    _update1CString(data) {
+        const line1cTextarea = document.querySelector('textarea.text-edit.line-1c[name="line_1c"]');
+        if (!line1cTextarea) {
+            console.error('❌ Textarea line_1c не найдена');
+            return;
+        }
+        
+        // Формируем строку в том же порядке, что и в Python-версии
+        const str1c = [
+            data['01_Ширина'] || '',
+            data['02_Высота'] || '',
+            data['03_Петли'] || '',
+            data['04_Лицо (цвет)'] || '',
+            data['05_Лицо (рисунок)'] || '',
+            data['06_Внутр. отделка (цвет)'] || '',
+            data['07_Внутр. отделка (рисунок)'] || '',
+            data['08_Фурнитура'] || '',
+            data['09_Монтаж'] || '',
+            data['10_Обналичка'] || '',
+            data['11_Обналичка (цвет)'] || ''
+        ].join(', ');
+        
+        line1cTextarea.value = str1c;
+        console.log('✅ Строка 1С обновлена:', str1c);
+    }
+
+    // Вспомогательный метод для показа эскиза
+    async showSketch(orderId) {
+        try {
+            console.log('🎨 Загрузка эскиза для заказа:', orderId);
+            const response = await fetch(`/api/get-sketch/${orderId}?t=${new Date().getTime()}`);
+            
+            if (response.ok) {
+                const blob = await response.blob();
+                const url = URL.createObjectURL(blob);
+                
+                // Пытаемся найти контейнер img_label
+                const imgLabel = document.getElementById('img_label');
+                
+                if (imgLabel) {
+                    imgLabel.innerHTML = '';
+                    const img = document.createElement('img');
+                    img.src = url;
+                    img.alt = 'Эскиз заказа';
+                    img.style.maxWidth = '100%';
+                    img.style.height = 'auto';
+                    img.style.border = '1px solid #ddd';
+                    img.style.borderRadius = '4px';
+                    imgLabel.appendChild(img);
+                    console.log('✅ Эскиз отображен в img_label');
+                } else {
+                    // Если img_label не найден, пробуем sketch-preview
+                    const sketchPreview = document.querySelector('#sketch-preview');
+                    if (sketchPreview) {
+                        sketchPreview.src = url;
+                        sketchPreview.style.display = 'block';
+                        console.log('✅ Эскиз отображен в sketch-preview');
+                    } else {
+                        console.warn('⚠️ Контейнер для эскиза не найден');
+                    }
+                }
+            } else {
+                console.warn('❌ Не удалось загрузить эскиз, статус:', response.status);
+            }
+        } catch (e) {
+            console.error('❌ Ошибка загрузки эскиза:', e);
+        }
+    }
+        
+    // ==================== РАСЧЁТ ЦЕНЫ — ИСПРАВЛЕННАЯ ВЕРСИЯ ====================
+    setupPriceButton() {
+        const priceButton = document.querySelector('.calc-cost');
+        if (priceButton) {
+            priceButton.addEventListener('click', () => this.calculatePrice());
+        }
+    }
+
+    showLoadingPrice(show) {
+        const calcButton = document.querySelector('.calc-cost');
+        if (calcButton) {
+            if (show) {
+                calcButton.disabled = true;
+                calcButton.innerHTML = '⏳Расчёт...';
+            } else {
+                calcButton.disabled = false;
+                calcButton.innerHTML = 'Расчёт цены';
+            }
+        }
+    }
+
+    async calculatePrice() {
+        console.log('💰 Расчёт цены...');
+        
+        try {
+            this.showLoadingPrice(true, '.calc-cost');
+            
+            const formData = this.prepareDataForPython();
+            
+            // ✅ Обёртка { data: ... }
+            const response = await fetch('/api/calc-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ data: formData })
+            });
+            
+            if (!response.ok) {
+                const errorText = await response.text().catch(() => '');
+                throw new Error(`Ошибка сервера: ${response.status} ${errorText}`);
+            }
+            
+            const result = await response.json();
+            
+            const priceTextarea = document.querySelector('textarea[name="text_info_2"]');
+            if (priceTextarea) {
+                if (result.success) {
+                    // ✅ Обрабатываем info как массив строк (как возвращает Python)
+                    const infoText = Array.isArray(result.info) 
+                        ? result.info.join('\n') 
+                        : (typeof result.info === 'string' ? result.info : 'Расчёт завершён');
+                    
+                    priceTextarea.value = infoText;
+                    
+                    // ✅ Прокрутка вниз + подсветка итоговой цены
+                    priceTextarea.style.display = 'block';
+                    priceTextarea.scrollTop = priceTextarea.scrollHeight;
+                    
+                    // Подсветка итоговой суммы (опционально)
+                    if (result.total_price) {
+                        priceTextarea.value += `\n\n💵 ИТОГО: ${result.total_price.toLocaleString('ru-RU')} ₽`;
+                    }
+                } else {
+                    priceTextarea.value = `❌ Ошибка: ${result.message || 'Неизвестная ошибка'}`;
+                    priceTextarea.style.color = 'red';
+                }
+            }
+            
+            console.log('✅ Цена рассчитана:', result);
+            
+        } catch (error) {
+            console.error('❌ Ошибка расчёта:', error);
+            const priceTextarea = document.querySelector('textarea[name="text_info_2"]');
+            if (priceTextarea) {
+                priceTextarea.value = `❌ Ошибка: ${error.message}`;
+                priceTextarea.style.display = 'block';
+                priceTextarea.style.color = 'red';
+            }
+        } finally {
+            this.showLoadingPrice(false, '.calc-cost');
+        }
+    }
+
+    // ==================== КНОПКА ЭСКИЗА ====================
+    setupSketchButton() {
+        const sketchButton = document.querySelector('.sketch-but'); 
+        
+        if (sketchButton) {
+            sketchButton.addEventListener('click', () => this.generateSketch());
+        } else {
+            console.warn('⚠️ Кнопка .sketch-but не найдена в DOM');
+        }
+    }
+
+    showLoadingSketch(show) {
+        const sketchButton = document.querySelector('.sketch-but');
+        
+        if (sketchButton) {
+            if (show) {
+                sketchButton.disabled = true;
+                sketchButton.innerHTML = 'Генерация...';
+            } else {
+                sketchButton.disabled = false;
+                sketchButton.innerHTML = 'Эскиз';
+            }
+        }
+    }
+    
+    async generateSketch() {
+        console.log('🎨 Генерация эскиза...');
+        
+        const formData = this.prepareDataForPython();
+        
+        formData['write_to_DB'] = false;
+
+
+        // Валидация обязательных полей
+        const validationResult = this.validateForm(formData);
+        if (!validationResult.isValid) {
+            alert(`Заполните обязательные поля:\n- ${validationResult.errors.join('\n- ')}`);
+            return;
+        }
+        
+        this.showLoadingSketch(true);
+        
+        // Очищаем контейнер перед генерацией
+        const container = document.getElementById('img_label');
+        if (container) {
+            container.innerHTML = '<span style="color:#666;">⏳ Идёт генерация эскиза...</span>';
+        }
+        
+        try {
+            // Запрос на генерацию
+            const response = await fetch('/api/make-order', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json'
+                    // 'Authorization': 'Basic ' + btoa('user:pass') // Если нужна авторизация
+                },
+                body: JSON.stringify({ data: formData })
+            });
+            
+            if (!response.ok) {
+                const errorText = await response.text().catch(() => '');
+                throw new Error(`Ошибка сервера: ${response.status} ${errorText}`);
+            }
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                console.log('✅ Эскиз сгенерирован:', result);
+                
+                // Вставляем изображение в #img_label
+                if (container) {
+                    container.innerHTML = ''; // Очищаем
+                    
+                    const img = document.createElement('img');
+                    // Добавляем таймстамп, чтобы избежать кэширования
+                    img.src = result.sketch_url + '?t=' + new Date().getTime();
+                    img.alt = 'Эскиз заказа';
+                    img.style.maxWidth = '100%';
+                    img.style.height = 'auto';
+                    img.style.border = '1px solid #ddd';
+                    img.style.borderRadius = '4px';
+                    
+                    container.appendChild(img);
+                    
+                    window.lastSketchUrl = result.sketch_url;
+                    window.lastContractId = result.contract_id;
+                }
+                
+
+                
+            } else {
+                const errorMsg = result.message || result.error || 'Неизвестная ошибка';
+                console.error('❌ Ошибка генерации:', errorMsg);
+                
+                if (container) {
+                    container.innerHTML = `<span style="color:red;">❌ ${errorMsg}</span>`;
+                }
+                alert('❌ Ошибка: ' + errorMsg);
+            }
+            
+        } catch (error) {
+            console.error('❌ Ошибка запроса:', error);
+            
+            if (container) {
+                container.innerHTML = `<span style="color:red;">❌ Ошибка соединения: ${error.message}</span>`;
+            }
+            alert('Ошибка при создании эскиза: ' + error.message);
+            
+        } finally {
+            this.showLoadingSketch(false);
+        }
+    }
+
+    // ==================== ПОИСК ПО АРХИВУ ====================
+    setupArchiveSearch() {
+        const searchButton = document.querySelector('button[name="found_arhive"]');
+        const searchInput = document.querySelector('input[name="order_arhive_inp"]');
+        
+        if (searchButton && searchInput) {
+            searchButton.addEventListener('click', () => {
+                this.searchInArchive(searchInput.value.trim());
+            });
+            
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    this.searchInArchive(searchInput.value.trim());
+                }
+            });
+        } else {
+            console.warn('⚠️ Элементы поиска по архиву не найдены');
+        }
+    }
+    
+    async searchInArchive(orderId) {
+        if (!orderId) {
+            alert('⚠️ Введите номер заказа для поиска');
+            return;
+        }
+        
+        console.log('🔍 Поиск заказа в архиве:', orderId);
+        
+        this.clearAllFields();
+
+        const searchInput = document.querySelector('input[name="order_arhive_inp"]');
+        if (searchInput) {
+            searchInput.value = orderId;
+        }
+
+        try {
+            this.showArchiveSearchLoading(true);
+            
+            const response = await fetch('/api/find-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ order_id: orderId })
+            });
+            
+            // ✅ Обрабатываем 404 как нормальный ответ "не найдено"
+            if (response.status === 404) {
+                const errorData = await response.json().catch(() => ({}));
+                alert(`❌ ${errorData.error || `Заказ №${orderId} не найден в архиве`}`);
+                return;
+            }
+            
+            if (!response.ok) {
+                const errorText = await response.text().catch(() => '');
+                throw new Error(`Ошибка сервера: ${response.status} ${errorText}`);
+            }
+            
+            const result = await response.json();
+            this.displayArchiveSearchResult(result, orderId);
+            
+        } catch (error) {
+            console.error('❌ Ошибка поиска:', error);
+            alert('Ошибка при поиске заказа: ' + error.message);
+        } finally {
+            this.showArchiveSearchLoading(false);
+        }
+    }
+    
+    showArchiveSearchLoading(show) {
+        const searchButton = document.querySelector('button[name="found_arhive"]');
+        if (searchButton) {
+            if (show) {
+                searchButton.disabled = true;
+                searchButton.innerHTML = '🔎 Поиск...';
+            } else {
+                searchButton.disabled = false;
+                searchButton.innerHTML = 'Найти';
+            }
+        }
+    }
+    
+    async displayArchiveSearchResult(result, orderId) {
+        console.log('📋 Результат поиска:', result);
+    
+        // Проверяем структуру ответа
+        const order = result.order || (Array.isArray(result) ? result[0] : result);
+        const sketchExists = result.sketch_exists || false;
+        const sketchUrl = result.sketch_url;
+        
+        if (!order || Object.keys(order).length === 0) {
+            alert(`❌ Заказ №${orderId} не найден в архиве`);
+            return;
+        }
+        
+        // ✅ Заполняем форму данными заказа
+        await this.fillFormFromArchive(order);
+        
+        // ✅ Отображаем эскиз, если он существует
+        if (sketchExists && sketchUrl) {
+            const imgLabel = document.getElementById('img_label');
+            if (imgLabel) {
+                imgLabel.innerHTML = '';
+                const img = document.createElement('img');
+                img.src = sketchUrl + '?t=' + new Date().getTime();
+                img.alt = 'Эскиз заказа';
+                img.style.maxWidth = '100%';
+                img.style.height = 'auto';
+                img.style.border = '1px solid #ddd';
+                img.style.borderRadius = '4px';
+                imgLabel.appendChild(img);
+                console.log('✅ Эскиз загружен из архива');
+            }
+        } else {
+            // Если эскиза нет, показываем сообщение
+            const imgLabel = document.getElementById('img_label');
+            if (imgLabel) {
+                imgLabel.innerHTML = '<span style="color:#666;">⚠️ Эскиз не найден в архиве</span>';
+            }
+        }
+        
+        alert(`✅ Заказ №${order.ContractID || orderId} найден и загружен в форму`);
+    }
+    
+        // ✅ Заполнение формы данными из архива (альтернативное решение)
+    // ✅ Заполнение формы данными из архива — с ожиданием ModelSelector
+    // ✅ Заполнение формы данными из архива — с корректным триггером change
+    async fillFormFromArchive(order) {
+        console.log('🔄 Заполнение формы данными заказа:', order);
+        
+        const modelSelect = document.getElementById('model-combo');
+        const modelSelector = this.modelSelector;
+        
+        // 1️⃣ Устанавливаем модель И триггерим change
+        if (modelSelect && order.Model) {
+            modelSelect.value = order.Model;
+            // ✅ ВАЖНО: вручную запускаем событие change
+            modelSelect.dispatchEvent(new Event('change'));
+            
+            // 2️⃣ Ждём завершения загрузки модели
+            if (modelSelector) {
+                await this.waitForModelLoad(modelSelector);
+            }
+        }
+        
+        // 3️⃣ Заполняем поля ПОСЛЕ загрузки списков
+        this._fillFormData(order);
+        console.log('✅ Форма заполнена данными из архива');
+    }
+    
+    // ✅ Ожидание завершения загрузки модели
+    async waitForModelLoad(modelSelector, maxWait = 3000) {
+        const startTime = Date.now();
+        
+        while (modelSelector.isModelLoading) {
+            if (Date.now() - startTime > maxWait) {
+                console.warn('⚠️ Таймаут ожидания загрузки модели');
+                break;
+            }
+            await new Promise(resolve => setTimeout(resolve, 50));
+        }
+        
+        // Дополнительная задержка для уверенности что DOM обновился
+        await new Promise(resolve => setTimeout(resolve, 100));
+    }
+    
+    // ✅ Вспомогательный метод для заполнения полей
+    _fillFormData(order) {
+        console.log('🔍 Проверка Count:', {
+            'order.Count': order.Count,
+            'order.count': order.count,
+            'все ключи order': Object.keys(order)
+        });
+        
+        // Маппинг: [Ключ из БД, Селектор в HTML]
+        const fieldMap = [
+            ['Width', 'input[name="width_inp"]'],
+            ['Height', 'input[name="height_inp"]'],
+            ['Hinge', 'select[name="side_combo"]'],
+            ['OutColor', 'select[name="out_color"]'],
+            ['OutPic', 'select[name="out_pic"]'],
+            ['InColor', 'select[name="in_color"]'],
+            ['InPic', 'select[name="in_pic"]'],
+            ['Furniture', 'select[name="furniture"]'],
+            ['Montage', 'select[name="montage_combo"]'],
+            ['Trim', 'select[name="trim_combo"]'],
+            ['TrimColor', 'select[name="trim_color_combo"]'],
+            ['CustomerName', 'input[name="customer_inp"]'],
+            ['Notes', 'textarea[name="order_notes"]'],
+            ['сount', 'input[name="count"]'],
+            ['TDOT', 'input[name="TDOT"]'],
+            ['ff_pic', 'input[name="ff_pic"]'],
+            ['height_head', 'input[name="height_head"]'],
+            ['vff', 'select[name="vff"]'],
+            ['zff', 'select[name="zff"]'],
+            ['pff', 'select[name="pff"]'],
+            ['head_pic_in', 'select[name="head_pic_in"]'],
+            ['head_pic_out', 'select[name="head_pic_out"]'],
+        ];
+        
+        // Заполняем поля из маппинга
+        fieldMap.forEach(([dbKey, selector]) => {
+            const value = order[dbKey];
+            const element = document.querySelector(selector);
+            if (element && value !== undefined && value !== null && value !== '') {
+                // Проверяем, есть ли такое значение в options
+                if (element.tagName === 'SELECT') {
+                    const optionExists = Array.from(element.options).some(opt => opt.value === value);
+                    if (optionExists) {
+                        element.value = value;
+                        element.dispatchEvent(new Event('input'));
+                    } else {
+                        console.warn(`⚠️ Значение "${value}" для ${dbKey} не найдено в списке`);
+                        // Устанавливаем первое доступное значение
+                        if (element.options.length > 1) {
+                            element.value = element.options[1].value;
+                        }
+                    }
+                } else {
+                    element.value = String(value);
+                    element.dispatchEvent(new Event('input'));
+                }
+            }
+        });
+        
+        // Глазок: конвертируем булевы значения в текст
+        const peepCombo = document.querySelector('select[name="peep_combo"]');
+        if (peepCombo) {
+            if (!order.peep) {
+                peepCombo.value = "Без глазка";
+            } else if (!order.peep_offset) {
+                peepCombo.value = "Глазок по центру";
+            } else {
+                peepCombo.value = "Глазок сбоку";
+            }
+        }
+        
+        // Надставка (булево значение)
+        const headBool = document.querySelector('select[name="head_bool"]');
+        if (headBool) {
+            headBool.value = order.head ? "С надставкой" : "Без надставки";
+        }
+        
+        // Опции: отмечаем чекбоксы
+        if (order.AdvanceOptions) {
+            let optionsList = [];
+            
+            if (typeof order.AdvanceOptions === 'string') {
+                if (order.AdvanceOptions.trim().startsWith('[')) {
+                    try {
+                        optionsList = JSON.parse(order.AdvanceOptions);
+                    } catch (e) {
+                        optionsList = order.AdvanceOptions.split(',').map(s => s.trim());
+                    }
+                } else {
+                    optionsList = order.AdvanceOptions.split(',').map(s => s.trim());
+                }
+            } else if (Array.isArray(order.AdvanceOptions)) {
+                optionsList = order.AdvanceOptions;
+            }
+            
+            document.querySelectorAll('#options-container input[type="checkbox"]').forEach(cb => cb.checked = false);
+            
+            optionsList.forEach(optName => {
+                if (!optName) return;
+                const checkbox = Array.from(document.querySelectorAll('#options-container input[type="checkbox"]'))
+                    .find(cb => cb.value === optName);
+                if (checkbox) {
+                    checkbox.checked = true;
+                } else {
+                    console.log(`⚠️ Опция "${optName}" не найдена в текущем списке`);
+                }
+            });
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modelSelector = new ModelSelector();
+    const buttonsHandler = new ButtonsHandler(modelSelector);
+});
+</script>

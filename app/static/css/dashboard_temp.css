@@ -1,0 +1,768 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 11pt;
+    }
+
+    body {
+        background-color: #f5f5f5;
+        padding: 20px;
+    }
+
+    .main-window {
+        width: 1760px;
+        height: 920px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 10px;
+        position: relative;
+    }
+
+    .frame {
+        width: 1740px;
+        height: 900px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        padding: 10px;
+        background: white;
+        position: relative;
+    }
+
+    .group-box {
+        border: 2px solid #aaa;
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 12px;
+        background: #f9f9f9;
+    }
+
+    .group-box h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 10pt;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 30px;
+    }
+
+    .form-label {
+        width: 150px;
+        text-align: right;
+        padding-right: 10px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .form-label.word-wrap {
+        word-wrap: break-word;
+        line-height: 1.2;
+    }
+
+    .form-control {
+        height: 25px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0 8px;
+        font-size: 11pt;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    select.form-control {
+        height: 25px;
+    }
+
+    input[type="text"].form-control {
+        width: 121px;
+    }
+
+    .checkbox-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .checkbox-item {
+        display: flex;
+        align-items: center;
+        height: 31px;
+        padding: 0 10px;
+    }
+
+    .checkbox-item input {
+        margin-right: 8px;
+    }
+
+    .text-edit {
+        width: 100%;
+        height: 200px; /* Фиксированная высота */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 11pt;
+        resize: vertical;
+    }
+
+    .button {
+        height: 31px;
+        padding: 0 15px;
+        border: 1px solid #007acc;
+        border-radius: 4px;
+        background: #007acc;
+        color: white;
+        cursor: pointer;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 12pt;
+    }
+
+    .field-error {
+    color: red !important;
+    border: 1px solid red !important;
+    background-color: #ffe6e6 !important;
+    }
+
+    .label-error {
+        color: red !important;
+    }
+    
+
+    .button:hover {
+        background: #005a9e;
+    }
+
+    .image-container {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    /* Layout positioning */
+    .layout-container {
+        display: grid;
+        grid-template-columns: 381px 441px 471px 391px;
+        grid-template-rows: 551px 261px 91px 91px auto;
+        gap: 10px;
+        position: relative;
+    }
+
+    .group-box-1 {
+        grid-column: 1;
+        grid-row: 1;
+        width: 381px;
+        height: 521px;
+    }
+
+    .group-box-2 {
+        grid-column: 2;
+        grid-row: 1;
+        width: 441px;
+        height: 521px;
+        display: flex;
+        flex-direction: column;
+        
+        /* Убираем внешние отступы, чтобы не ломать высоту */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .group-box-2 h3 {
+        /* Заголовок не сжимается */
+        flex-shrink: 0;
+        margin: 0;
+        padding: 15px; /* Высота заголовка с отступами */
+        box-sizing: border-box;
+    }
+
+    .options-container {
+        /* Контейнер занимает всё оставшееся место */
+        flex-grow: 1;
+        
+        /* Включаем прокрутку */
+        overflow-y: auto;
+        
+        /* Внутренние отступы для опций */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .image-label {
+        grid-column: 3;
+        grid-row: 1;
+        width: 471px;
+        height: 541px;
+    }
+
+    .group-box-3 {
+        position: absolute;
+        left: 390px;
+        bottom: 310px;
+        width: 441px;
+        height: 182px;
+    }
+
+    .group-box-4 {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+        width: 390px;
+        height: 665px;
+    }
+
+    .group-box-5 {
+        position: absolute;
+        left: 0px;
+        bottom: 310px;
+        width: 381px;
+        height: 182px;
+    }
+
+    .group-box-6 {
+        position: absolute;
+        left: 0px;
+        bottom: 209px;
+        width: 381px;
+        height: 91px;
+    }
+
+    .group-box-7 {
+        position: absolute;
+        left: 390px;
+        bottom: 209px;
+        width: 200px;
+        height: 91px;
+    }
+
+    .group-box-8 {
+        position: absolute;
+        left: 600px;
+        bottom: 209px;
+        width: 231px;
+        height: 91px;
+    }
+
+    .text-info {
+        grid-column: 3;
+        grid-row: 2;
+        width: 470px;
+        height: 101px;
+    }
+
+    .group-box-19 {
+        position: absolute;
+        right: 10px;
+        bottom: 209px;
+        width: 371px;
+        height: 91px;
+    }
+
+    .line-1c {
+        position: absolute;
+        left: 842px;
+        bottom: 220px;
+        width: 362px;
+        height: 91px;
+    }
+
+    /* Button positioning */
+    .check-but {
+        position: absolute;
+        left: 842px;
+        bottom: 325px;
+        width: 101px;
+    }
+
+    .pdf-but {
+        position: absolute;
+        left: 952px;
+        bottom: 325px;
+        width: 131px;
+    }
+
+    .clear-but {
+        position: absolute;
+        left: 1202px;
+        bottom: 325px;
+        width: 110px;
+    }
+
+    .sketch-but {
+        position: absolute;
+        left: 1092px;
+        bottom: 325px;
+        width: 101px;
+    }
+
+    .copy-but {
+        position: absolute;
+        left: 1211px;
+        bottom: 250px;
+        width: 118px;
+    }
+
+    .calc-cost {
+        position: absolute;
+        right: 130px;
+        bottom: 325px;
+        width: 141px;
+    }
+
+    .tabs-header {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 15px;
+        padding-left: 10px;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+    }
+
+    .tab-button {
+        padding: 8px 20px;
+        border: 1px solid #ccc;
+        background: #f0f0f0;
+        border-radius: 4px 4px 0 0;
+        cursor: pointer;
+        font-size: 12pt;
+    }
+
+    .tab-button:hover {
+        background: #e0e0e0;
+    }
+
+    .tab-button.active {
+        background: white;
+        color: #007acc;
+        font-weight: bold;
+        border-bottom: 2px solid white;
+        margin-bottom: -2px;
+    }
+
+    .tab-content {
+        display: none;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    .group-box-20 {
+        grid-column: 2;
+        grid-row: 1;
+        width: 381px;
+        height: 211px;
+    }
+
+    .group-box-21 {
+        grid-column: 1;
+        grid-row: 1;
+        width: 381px;
+        height: 211px;
+    }
+
+    .group-box-22 {
+        position: absolute;
+        left: 0px;
+        top: 221px;
+        width: 772px;
+        height: 182px;
+    }
+
+    .group-box-23 {
+        position: absolute;
+        left: 0px;
+        top: 474px;
+        width: 772px;
+        height: 182px;
+    }
+
+    .image-label2 {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 935px;
+        height: 818px;
+    }
+
+    .sketch-but2{
+        position: absolute;
+        left: 321px;
+        top: 413px;
+        width: 120px;
+        height: 51px;
+
+    }
+
+@media screen and (max-width: 768px) {
+    /* ================= 1. КОНТЕЙНЕРЫ РАСТЯГИВАЮТСЯ ДО КОНЦА ================= */
+    .main-window, .frame {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;          /* Разрешаем авто-высоту */
+        min-height: 100vh;                /* Минимум на весь экран */
+        padding: 12px;
+        border-radius: 0;
+        box-shadow: none;
+        box-sizing: border-box;
+        overflow: visible;                /* Запрещаем обрезку контента */
+    }
+    .frame {
+        position: static !important;      /* Убираем relative, чтобы контейнер рос по контенту */
+        border: 1px solid #ccc;
+    }
+
+    body { padding: 8px; font-size: 16px; }
+
+    /* ================= 2. СЕТКА -> ВЕРТИКАЛЬНЫЙ FLEX ================= */
+    .layout-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        height: auto !important;          /* Разрешаем растягиваться */
+        min-height: calc(100vh - 24px);   /* Коррекция под padding body */
+    }
+
+    /* ================= 3. СБРОС ПОЗИЦИОНИРОВАНИЯ И РАЗМЕРОВ ================= */
+    .group-box, .group-box-1, .group-box-2, .group-box-3, .group-box-4,
+    .group-box-5, .group-box-6, .group-box-7, .group-box-8,
+    .group-box-19, .group-box-20, .group-box-21, .group-box-22, .group-box-23,
+    .image-label, .image-label2, .line-1c, .text-info,
+    .check-but, .pdf-but, .clear-but, .sketch-but, .sketch-but2, .copy-but, .calc-cost {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        left: auto !important; right: auto !important; top: auto !important; bottom: auto !important;
+        grid-column: auto !important; grid-row: auto !important;
+        margin-bottom: 12px;
+        order: 99;
+    }
+
+    /* ================= 4. ПОРЯДОК ЭЛЕМЕНТОВ ================= */
+    .group-box-1  { order: 1; }
+    .group-box-2  { order: 2; }
+    .group-box-5  { order: 3; }
+    .group-box-6  { order: 4; }
+    .group-box-7  { order: 5; }
+    .group-box-8  { order: 6; }
+    .group-box-3  { order: 7; }
+    .text-info    { order: 8; }
+    .check-but    { order: 9; }
+    .pdf-but    { order: 10; }
+    .clear-but    { order: 11; }
+    .group-box-4  { order: 12; }
+    .image-label, .sketch-but { order: 13; }
+    .line-1c      { order: 14; }
+    .copy-but     { order: 15; }
+    .group-box-19 { order: 16; }
+    .group-box-21 { order: 17; }
+    .group-box-20 { order: 18; }
+    .group-box-22 { order: 19; }
+    .image-label2 { order: 20; }
+    .sketch-but2 { order: 21; }
+    .group-box-23 { order: 22; }
+
+    /* ================= 5. АДАПТАЦИЯ ФОРМ ================= */
+    .form-row { flex-direction: column; align-items: stretch; height: auto; margin-bottom: 14px; }
+    .form-label { width: 100% !important; text-align: left; padding-right: 0; margin-bottom: 6px; font-size: 14px; display: block; }
+    .form-control, input[type="text"].form-control, select.form-control {
+        width: 100% !important; max-width: 100% !important; height: 44px; font-size: 16px; padding: 8px 12px; box-sizing: border-box;
+    }
+    .text-edit { width: 100% !important; height: 160px !important; min-height: 120px; box-sizing: border-box; }
+    .checkbox-item { height: auto; padding: 8px 0; }
+    .tabs-header { flex-wrap: wrap; gap: 8px; padding-left: 0; }
+    .tab-button { flex: 1 1 auto; min-height: 40px; padding: 8px 10px; font-size: 14px; text-align: center; }
+    .options-container { max-height: 250px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .group-box { padding: 16px; box-sizing: border-box; }
+    .group-box h3 { font-size: 16px; margin-bottom: 12px; text-align: left; }
+    .button, .check-but, .calc-cost, .clear-but, .sketch-but, .copy-but, .pdf-but {
+        width: 100% !important; height: 48px; margin-bottom: 10px; font-size: 15px; border-radius: 8px;
+    }
+
+    /* ================= 6. ЭКОНОМИЧЕСКИЙ РАСЧЁТ (.group-box-4) ================= */
+    .group-box-4 { padding: 16px; }
+    .group-box-4 div[style*="align-items: center"] {
+        flex-direction: column !important; align-items: stretch !important; gap: 10px !important;
+    }
+    .group-box-4 select.form-control, .group-box-4 input.form-control { width: 100% !important; max-width: 100% !important; }
+    .group-box-4 .text-edit { height: 280px !important; min-height: 200px; }
+    .group-box-4 div[style*="justify-content: center"] { justify-content: stretch !important; }
+    .group-box-4 .button { margin-top: 10px; }
+
+    /* ================= 7. ЗАКАЗЧИК И ТДОТ (.group-box-6, .group-box-7) ================= */
+    .group-box-6, .group-box-7 {
+        display: flex !important; flex-direction: column !important;
+        align-items: stretch !important; gap: 8px; padding: 12px;
+    }
+    .group-box-6 h3, .group-box-7 h3 { margin-bottom: 4px; text-align: left; }
+    .group-box-6 input.form-control, .group-box-7 input.form-control {
+        width: 100% !important; max-width: 100% !important; height: 44px; margin-top: 4px;
+    }
+
+    /* ================= 8. ИЗОБРАЖЕНИЕ МАКСИМАЛЬНО ПО ГОРИЗОНТАЛИ ================= */
+    .image-label {
+        width: 100% !important; max-width: 100% !important; height: auto !important;
+        min-height: 250px !important; aspect-ratio: auto !important; padding: 0 !important; margin: 0 !important;
+        display: flex; flex-direction: column;
+    }
+    .image-label .image-container {
+        width: 100% !important; height: 100% !important; min-height: 250px;
+        border: none; background: #f9f9f9; border-radius: 6px; overflow: hidden;
+    }
+    .image-label img { width: 100% !important; height: auto !important; object-fit: contain; }
+
+    /* ================= 9. ГЛАЗОК (.group-box-5) ================= */
+    .group-box-5 { padding: 12px; overflow: hidden; }
+    .group-box-5 div[style*="display: flex"] {
+        flex-direction: column !important; align-items: stretch !important;
+        justify-content: flex-start !important; gap: 10px !important; width: 100% !important;
+    }
+    .group-box-5 select.form-control, .group-box-5 input.form-control {
+        width: 100% !important; max-width: 100% !important; margin: 0;
+    }
+    .group-box-5 label.form-label { width: 100% !important; display: block; margin-bottom: 4px; text-align: left; padding: 0; }
+    .group-box-5 > div > div:last-child {
+        flex-direction: row !important; flex-wrap: wrap !important; gap: 8px !important; justify-content: space-between !important;
+    }
+    .group-box-5 > div > div:last-child > div {
+        flex: 1 1 calc(50% - 4px) !important; min-width: 140px; flex-direction: column !important;
+    }
+
+        /* ================= 10. ИСПРАВЛЕНИЕ: АРТИКУЛЫ ДЛЯ ВЫГРУЗКИ (.group-box-23) ================= */
+    .group-box-23 {
+        padding: 12px !important;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    /* Ломаем горизонтальные строки с инлайн-стилями */
+    .group-box-23 div[style*="display: flex"] {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        width: 100% !important;
+        margin-bottom: 12px !important;
+    }
+    
+    /* Лейблы на всю строку */
+    .group-box-23 label.form-label {
+        width: 100% !important;
+        display: block;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        white-space: normal !important;
+        flex-shrink: 1 !important;
+    }
+    
+    /* Поля ввода: 100% ширина вместо 500px */
+    .group-box-23 input.form-control {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        height: 44px !important;
+        font-size: 14px;
+        font-family: 'Segoe UI', monospace;
+        box-sizing: border-box;
+        padding: 8px 12px;
+    }
+    
+    /* Кнопки копирования: на всю ширину, большие для пальца */
+    .group-box-23 button[onclick*="copyToClipboard"] {
+        width: 100% !important;
+        height: 44px !important;
+        flex-shrink: 0 !important;
+        font-size: 16px;
+        border-radius: 6px;
+        margin-top: 4px;
+    }
+    
+    /* Разделитель между строками артикулов */
+    .group-box-23 > div {
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+    .group-box-23 > div:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    /* ================= 11. ИСПРАВЛЕНИЕ: ВТОРОЕ ИЗОБРАЖЕНИЕ (.image-label2) ================= */
+    .image-label2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 250px !important;
+        aspect-ratio: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .image-label2 .image-container {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 250px;
+        border: 1px solid #ddd;
+        background: #f9f9f9;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    
+    .image-label2 img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+/* ================= ЦВЕТОВАЯ СХЕМА И ОБВОДКА ================= */
+
+/* --- Группы блоков (фон + обводка) --- */
+.group-box-1 { background-color: #efeaf0 !important; border-color: #7c93a5 !important; }
+.group-box-2 { background-color: #f2e6e6 !important; border-color: #7c93a5 !important; }
+.group-box-3 { background-color: #e7ecf2 !important; border-color: #7c93a5 !important; }
+.group-box-4 { background-color: #c9e6ca !important; border-color: #7c93a5 !important; }
+.group-box-5 { background-color: #f3eaed !important; border-color: #7c93a5 !important; }
+.group-box-6 { background-color: #edeae3 !important; border-color: #7c93a5 !important; }
+.group-box-7 { background-color: #e8f0fd !important; border-color: #7c93a5 !important; }
+.group-box-8 { background-color: #c6e7ca !important; border-color: #7c93a5 !important; }
+.group-box-19 { background-color: #f7f5e6 !important; border-color: #7c93a5 !important; }
+.group-box-20 { background-color: #efeaf0 !important; border-color: #7c93a5 !important; }
+.group-box-21 { background-color: #f2e6e6 !important; border-color: #7c93a5 !important; }
+.group-box-22 { background-color: #e7ecf2 !important; border-color: #7c93a5 !important; }
+.group-box-23 { background-color: #c9e6ca !important; border-color: #7c93a5 !important; }
+
+/* --- Контейнер опций внутри group-box-2 --- */
+.options-container { 
+    background-color: #f2e6e6 !important; 
+}
+
+/* --- Кнопки (фон + обводка + цвет текста) --- */
+/* Используем более специфичные селекторы для переопределения .button стилей */
+button.check-but, .check-but.button { 
+    background-color: #afbdc6 !important; 
+    border: 1px solid #7c93a5 !important; 
+    color: #1a1a1a !important;
+}
+button.check-but:hover, .check-but.button:hover { 
+    background-color: #9aabb4 !important; 
+}
+
+button.pdf-but, .pdf-but.button { 
+    background-color: #c4e7c6 !important; 
+    border: 1px solid #7c93a5 !important; 
+    color: #1a1a1a !important;
+}
+button.pdf-but:hover, .pdf-but.button:hover { 
+    background-color: #b0d9b2 !important; 
+}
+
+button.clear-but, .clear-but.button { 
+    background-color: #c3a1a0 !important; 
+    border: 1px solid #7c93a5 !important; 
+    color: #1a1a1a !important;
+}
+button.clear-but:hover, .clear-but.button:hover { 
+    background-color: #b58a89 !important; 
+}
+
+button.calc-cost, .calc-cost.button,
+button.sketch-but, .sketch-but.button,
+button.sketch-but2, .sketch-but2.button { 
+    background-color: #e5dea7 !important; 
+    border: 1px solid #7c93a5 !important; 
+    color: #1a1a1a !important;
+}
+button.calc-cost:hover, .calc-cost.button:hover,
+button.sketch-but:hover, .sketch-but.button:hover,
+button.sketch-but2:hover, .sketch-but2.button:hover { 
+    background-color: #d9cf8a !important; 
+}
+
+button.copy-but, .copy-but.button { 
+    background-color: #e4b5c5 !important; 
+    border: 1px solid #7c93a5 !important; 
+    color: #1a1a1a !important;
+}
+button.copy-but:hover, .copy-but.button:hover { 
+    background-color: #d99fb2 !important; 
+}
+
+button.found-arhive, .found-arhive.button {
+    background-color: #e2dedf !important;
+    border: 1px solid #7c93a5 !important;
+    color: #1a1a1a !important;
+}
+
+button.found-arhive:hover, .found-arhive.button:hover {
+    background-color: #d5d0d1 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .group-box-1, .group-box-2, .group-box-3, .group-box-4,
+    .group-box-5, .group-box-6, .group-box-7, .group-box-8,
+    .group-box-19 {
+        border: 1px solid #7c93a5 !important;
+    }
+    
+    .check-but, .pdf-but, .clear-but, .sketch-but, 
+    .sketch-but2, .copy-but, .calc-cost, .found-arhive {
+        border: 1px solid #7c93a5 !important;
+    }
+}
+
+/* ================= ЛОГОТИП (Десктоп) ================= */
+.logo-header {
+    position: absolute;       
+    top: 5px;                
+    left: 50%;                
+    transform: translateX(-50%); /* Жёсткое центрирование */
+    z-index: 100;             
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+/* ================= ЛОГОТИП (Мобильная версия) ================= */
+@media screen and (max-width: 768px) {
+    .logo-header {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        text-align: center;      /* Центрируем контейнер */
+        margin: 12px 0 16px 0;
+        display: block;
+    }
+    
+    .logo-img {
+        margin: 0 auto;          /* Центрируем картинку внутри блока */
+        height: 34px;
+    }
+}

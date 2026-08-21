@@ -1,0 +1,56 @@
+WEB_NST_TEST/
+├── _UpdateAll.py                 # Главный оркестратор обновления
+├── CreateDB.py                   # Создание структуры БД
+├── ParseXML.py                   # Парсинг XML (ассортимент)
+├── SaveUncToGoogle.py            # Поиск несовместимостей в Google Sheets
+├── _update_manuals_table.py      # Обновление ручных несовместимостей
+├── _update_models_table.py       # Обновление несовместимостей моделей
+├── _update_non_models_table.py   # Обновление глобальных несовместимостей
+├── UpdateMDF.py                  # Обновление БД рисунков МДФ
+├── UpdatePriceDB.py              # Обновление БД цен
+├── Delete_BD.py                  # Удаление БД
+├── credentials.json              # Ключи доступа к Google Sheets
+└── update.log                    # Лог выполнения
+
+
+Поток данных между файлами:
+_UpdateAll.py (оркестратор)
+       │
+       ├──► CreateDB.py ──► создает структуру БД
+       │
+       ├──► ParseXML.py ──► читает XML ──► заполняет doors.db
+       │
+       ├──► _update_manuals_table.py ──► Google ──► Manual_incomp
+       │
+       ├──► SaveUncToGoogle.py ──► doors.db ──► Google (анализ)
+       │
+       ├──► _update_models_table.py ──► Google ──► incompatibilities
+       │
+       ├──► UpdateMDF.py ──► Google ──► mdf_pic.db
+       │
+       └──► UpdatePriceDB.py ──► XML ──► price_database.db
+
+Зависимости модулей:
+_UpdateAll.py
+    ├── requires: CreateDB, ParseXML, SaveUncToGoogle,
+    │             _update_manuals_table, _update_models_table,
+    │             UpdateMDF, UpdatePriceDB, Delete_BD
+    │
+    ├── uses: Config (пути к файлам)
+    │
+    └── produces: doors.db, mdf_pic.db, price_database.db, update.log
+
+ParseXML.py
+    ├── requires: нет (самостоятельный)
+    ├── reads: XML файл ассортимента
+    └── writes: doors.db
+
+UpdateMDF.py
+    ├── requires: credentials.json
+    ├── reads: Google Sheets (2 листа)
+    └── writes: mdf_pic.db
+
+UpdatePriceDB.py
+    ├── requires: нет
+    ├── reads: XML файл цен
+    └── writes: price_database.db

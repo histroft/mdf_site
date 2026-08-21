@@ -1,0 +1,91 @@
+cat > /home/alex/development/WEB_NST/.gitignore << 'EOF'
+# ==================== PYTHON ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+develop-eggs/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.pyc
+*.pyo
+
+# ==================== ВИРТУАЛЬНОЕ ОКРУЖЕНИЕ ====================
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.local
+.env.*.local
+
+# ==================== PID ФАЙЛЫ ====================
+*.pid
+webnst.pid
+*.pid.lock
+
+# ==================== БАЗЫ ДАННЫХ ====================
+*.db
+*.sqlite
+*.sqlite3
+database/*.db
+!database/.gitkeep
+
+# ==================== ЛОГИ ====================
+*.log
+logs/
+*.log.*
+!logs/.gitkeep
+
+# ==================== ЗАКАЗЫ И ВРЕМЕННЫЕ ФАЙЛЫ ====================
+orders/
+orders_new/cuttings/
+orders_new/DXF/
+orders_new/Pic/
+temp/
+backup/
+*.tmp
+*.temp
+
+# ==================== IDE ====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ==================== ФАЙЛЫ ПРОЕКТА ====================
+*.bak
+*.backup
+*.orig
+*.rej
+*.pid
+
+# ==================== СЕКРЕТЫ ====================
+credentials.json
+*.key
+*.pem
+*.crt
+.secrets/
+
+# ==================== СОХРАНЯЕМ ПАПКИ ====================
+!database/.gitkeep
+!logs/.gitkeep
+!orders/.gitkeep
+!temp/.gitkeep
+!backup/.gitkeep
+EOF

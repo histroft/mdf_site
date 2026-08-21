@@ -1,0 +1,101 @@
+flowchart TD
+    START([НАЧАЛО]) --> INIT[Инициализация MakeDoorDXF<br/>с данными заказа]
+    
+    INIT --> STEP1[ШАГ 1: Создание наружного вида]
+    INIT --> STEP2[ШАГ 2: Создание внутреннего вида]
+    INIT --> STEP3[ШАГ 3: Создание разрезов]
+    
+    subgraph STEP1_DETAIL [Создание наружного вида]
+        A1[Копирование базового файла<br/>model_OUT.dxf] --> A2[Вставка рисунка<br/>pic_out.dxf]
+        A2 --> A3[Добавление фальшфрамуги<br/>ff_out.py]
+        A3 --> A4[Добавление аннотаций<br/>notes_out.py]
+        A4 --> A5[Масштабирование<br/>под размеры двери]
+        A5 --> A6[Вставка фурнитуры<br/>замки, глазок]
+        A6 --> A7[Зеркалирование<br/>если нужно]
+        A7 --> A8[Сохранение<br/>door_dxf_out.dxf]
+    end
+    
+    subgraph STEP2_DETAIL [Создание внутреннего вида]
+        B1[Копирование базового файла<br/>model_in.dxf] --> B2[Вставка рисунка<br/>pic_in.dxf]
+        B2 --> B3[Добавление фальшфрамуги<br/>ff_in.py если есть]
+        B3 --> B4[Добавление аннотаций<br/>notes_in.py]
+        B4 --> B5[Масштабирование<br/>под размеры двери]
+        B5 --> B6[Вставка фурнитуры<br/>замки, задвижки, глазок]
+        B6 --> B7[Зеркалирование<br/>если нужно]
+        B7 --> B8[Сохранение<br/>door_dxf_in.dxf]
+    end
+    
+    subgraph STEP3_DETAIL [Создание разрезов]
+        C1[Определение типа разреза<br/>с фальшфрамугой или без] --> C2[Копирование шаблона<br/>vert_cut.dxf / horiz_cut.dxf]
+        C2 --> C3[Добавление фальшфрамуги<br/>если нужно]
+        C3 --> C4[Добавление надставки<br/>если нужно]
+        C4 --> C5[Замена текстовых полей<br/>WIDTH, H0, vff, zff, pff]
+        C5 --> C6[Зеркалирование<br/>для правой стороны]
+        C6 --> C7[Сохранение<br/>cut_vert.dxf / cut_horiz.dxf]
+    end
+    
+    STEP1 --> STEP1_DETAIL
+    STEP2 --> STEP2_DETAIL
+    STEP3 --> STEP3_DETAIL
+    
+    STEP1_DETAIL --> STEP4[ШАГ 4: Сборка главного файла]
+    STEP2_DETAIL --> STEP4
+    STEP3_DETAIL --> STEP4
+    
+    subgraph STEP4_DETAIL [Сборка главного файла]
+        D1[Анализ размеров всех чертежей<br/>get_drawing_bounds] --> D2[Расчет позиций<br/>calculate_positions]
+        D2 --> D3[Создание нового документа<br/>main.dxf]
+        D3 --> D4[Вставка горизонтального разреза<br/>в позицию HORIZ_POS]
+        D4 --> D5[Вставка наружного вида<br/>в позицию OUT_POS]
+        D5 --> D6[Вставка вертикального разреза<br/>в позицию VERT_POS]
+        D6 --> D7[Вставка внутреннего вида<br/>в позицию IN_POS]
+        D7 --> D8[Добавление текста слева<br/>информация о заказе]
+        D8 --> D9[Замена текстовых полей<br/>WIDTH, H0, vff и др.]
+        D9 --> D10[Сохранение main.dxf]
+    end
+    
+    STEP4 --> STEP4_DETAIL
+    
+    STEP4_DETAIL --> STEP5[ШАГ 5: Конвертация в PNG]
+    
+    subgraph STEP5_DETAIL [Конвертация в PNG]
+        E1[Загрузка main.dxf] --> E2[Определение границ чертежа]
+        E2 --> E3[Создание изображения<br/>matplotlib]
+        E3 --> E4[Рендеринг всех объектов:<br/>линии, окружности, дуги, текст]
+        E4 --> E5[Обрезка пустого пространства<br/>trim_png]
+        E5 --> E6[Сохранение main.png<br/>с DPI=200]
+    end
+    
+    STEP5 --> STEP5_DETAIL
+    
+    STEP5_DETAIL --> STEP6[ШАГ 6: Конвертация в PDF]
+    
+    subgraph STEP6_DETAIL [Конвертация в PDF]
+        F1[Загрузка main.png] --> F2[Обрезка изображения<br/>если нужно]
+        F2 --> F3[Конвертация в PDF<br/>img2pdf]
+        F3 --> F4[Сохранение main.pdf]
+    end
+    
+    STEP6 --> STEP6_DETAIL
+    
+    STEP6_DETAIL --> STEP7[ШАГ 7: Добавление водяного знака]
+    
+    subgraph STEP7_DETAIL [Добавление водяного знака]
+        G1[Загрузка PDF] --> G2[Создание сетки водяных знаков<br/>T O R E X]
+        G2 --> G3[Наложение на страницы<br/>с прозрачностью 20%]
+        G3 --> G4[Сохранение PDF<br/>с водяным знаком]
+    end
+    
+    STEP7 --> STEP7_DETAIL
+    
+    STEP7_DETAIL --> END([КОНЕЦ<br/>Созданы файлы:<br/>main.dxf, main.png, main.pdf])
+    
+    style START fill:#90EE90
+    style END fill:#FFB6C1
+    style STEP1_DETAIL fill:#E6E6FA
+    style STEP2_DETAIL fill:#E6E6FA
+    style STEP3_DETAIL fill:#E6E6FA
+    style STEP4_DETAIL fill:#FFE4B5
+    style STEP5_DETAIL fill:#B0E0E6
+    style STEP6_DETAIL fill:#B0E0E6
+    style STEP7_DETAIL fill:#B0E0E6

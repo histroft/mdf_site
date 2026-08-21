@@ -1,0 +1,109 @@
+graph TB
+    subgraph ВХОДНЫЕ_ДАННЫЕ
+        DATA[("Словарь data<br/>с параметрами заказа")]
+    end
+
+    subgraph ГЛАВНЫЙ_МОДУЛЬ
+        MAIN[MakeDoorDXF<br/>Главный класс сборки]
+    end
+
+    subgraph СОЗДАНИЕ_ЧЕРТЕЖЕЙ
+        OUT[out_dxf.py<br/>Наружный вид]
+        IN[in_dxf.py<br/>Внутренний вид]
+        CUTS[cuts.py<br/>Разрезы]
+        
+        FF_OUT[ff_out.py<br/>Фальшфрамуга наружная]
+        FF_IN[ff_in.py<br/>Фальшфрамуга внутренняя]
+        
+        NOTES_OUT[notes_out.py<br/>Аннотации наружные]
+        NOTES_IN[notes_in.py<br/>Аннотации внутренние]
+    end
+
+    subgraph DXF_МОДУЛИ
+        BASE[base.py<br/>DXFDocument<br/>Базовый класс]
+        INSERT[inserting.py<br/>Вставка DXF]
+        TRANSFORM[transforms.py<br/>Масштаб/Отражение]
+        PRIM[primitives.py<br/>Примитивы]
+        TEXT[text.py<br/>Работа с текстом]
+    end
+
+    subgraph КОНВЕРТАЦИЯ
+        DXF2PNG[dxf_to_jpg.py<br/>DXF → PNG]
+        PNG2PDF[png_to_pdf.py<br/>PNG → PDF]
+        WATERMARK[add_watermark.py<br/>Водяные знаки]
+    end
+
+    subgraph ВЫХОДНЫЕ_ФАЙЛЫ
+        DXF_OUT[main.dxf<br/>Главный DXF]
+        PNG_OUT[main.png<br/>Изображение]
+        PDF_OUT[main.pdf<br/>Документ]
+    end
+
+    subgraph ПОЗИЦИОНИРОВАНИЕ
+        POS_CALC[calculate_positions<br/>Расчет позиций]
+        GET_BOUNDS[get_drawing_bounds<br/>Определение границ]
+        INSERT_DWG[insert_drawing<br/>Вставка чертежа]
+    end
+
+    subgraph ТРАНСФОРМАЦИИ
+        SCALE[scale_msp<br/>Масштабирование]
+        MIRROR[mirror_msp<br/>Зеркалирование]
+    end
+
+    subgraph ТЕКСТ
+        TEXT_LEFT[add_left_side_text<br/>Текст слева]
+        TEXT_REPLACE[replace_text_in_main<br/>Замена текстовых полей]
+    end
+
+    DATA --> MAIN
+
+    MAIN --> OUT
+    MAIN --> IN
+    MAIN --> CUTS
+    
+    OUT --> FF_OUT
+    OUT --> NOTES_OUT
+    IN --> FF_IN
+    IN --> NOTES_IN
+    
+    OUT --> BASE
+    IN --> BASE
+    CUTS --> BASE
+    
+    OUT --> INSERT
+    IN --> INSERT
+    CUTS --> INSERT
+    
+    OUT --> TRANSFORM
+    IN --> TRANSFORM
+    CUTS --> TRANSFORM
+    
+    MAIN --> POS_CALC
+    POS_CALC --> GET_BOUNDS
+    POS_CALC --> INSERT_DWG
+    
+    INSERT_DWG --> INSERT
+    
+    MAIN --> TEXT_LEFT
+    MAIN --> TEXT_REPLACE
+    
+    TEXT_REPLACE --> TEXT
+    TEXT_LEFT --> TEXT
+    
+    MAIN --> SCALE
+    MAIN --> MIRROR
+    
+    MAIN --> DXF_OUT
+    
+    DXF_OUT --> DXF2PNG
+    DXF2PNG --> PNG_OUT
+    PNG_OUT --> PNG2PDF
+    PNG2PDF --> PDF_OUT
+    PDF_OUT --> WATERMARK
+    WATERMARK --> PDF_OUT
+
+    style ВХОДНЫЕ_ДАННЫЕ fill:#e1f5e1
+    style ВЫХОДНЫЕ_ФАЙЛЫ fill:#ffe1e1
+    style ГЛАВНЫЙ_МОДУЛЬ fill:#e1e5ff
+    style DXF_МОДУЛИ fill:#fff0e1
+    style КОНВЕРТАЦИЯ fill:#f0e1ff

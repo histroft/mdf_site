@@ -1,0 +1,43 @@
+{% macro scene_select(id, label, options, default) %}
+<div class="door3d-field">
+    <label for="{{ id }}">{{ label }}</label>
+    <select id="{{ id }}" data-texture-preview="scene">
+        {% for value, name in options %}
+        <option
+            value="{{ value }}"
+            data-preview-url="{{ url_for('main.preview_scene_texture', asset=value) }}"
+            {% if value == default %}selected{% endif %}
+        >{{ name }}</option>
+        {% endfor %}
+    </select>
+</div>
+{% endmacro %}
+
+<div class="door3d-section">
+    <div class="door3d-toolbar">
+        <button type="button" class="door3d-generate-but">Сгенерировать 3D</button>
+        <span class="door3d-status" id="door3d-status">Готово к генерации</span>
+    </div>
+
+    <div class="door3d-controls">
+        {{ scene_select('door3d-wall-out', 'Стена снаружи', scene_walls, 'decor/wall3.jpg') }}
+        {{ scene_select('door3d-floor-out', 'Пол снаружи', scene_floors, 'decor/floor.jpg') }}
+        {{ scene_select('door3d-wall-in', 'Стена изнутри', scene_walls, 'decor/wall.jpg') }}
+        {{ scene_select('door3d-floor-in', 'Пол изнутри', scene_floors, 'decor/floor.jpg') }}
+    </div>
+
+    <div class="door3d-images">
+        <div class="door3d-image-block">
+            <div class="door3d-image-title">Наружная сторона</div>
+            <div class="image-container" id="door3d-img-out">
+                <span>Изображение будет здесь</span>
+            </div>
+        </div>
+        <div class="door3d-image-block">
+            <div class="door3d-image-title">Внутренняя сторона</div>
+            <div class="image-container" id="door3d-img-in">
+                <span>Изображение будет здесь</span>
+            </div>
+        </div>
+    </div>
+</div>
